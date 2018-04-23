@@ -1,0 +1,38 @@
+{% extends "main_template.html" %}
+
+{% block content %}
+{# Hero Section #}
+<div class="site-index">
+
+    <div class="jumbotron">
+
+        <h1 itemprop='name'>Одесько-Балтська єпархія УПЦ Київський Патріархат</h1>
+
+        <h2>ПАСХАЛЬНЕ ПОСЛАННЯ</h2>
+        <p class="lead"></p>
+        <p><a class="btn btn-lg btn-success" href="/" ><span id="primary_cta_1" class="hide">Читати</span>Христос Воскрес!</a></p>
+    </div>
+</div>
+
+<div class="body-content">
+
+
+    <h2>Новини</h2>
+
+<div class="row">
+  {% for post in news %}
+     <div class="col-lg-12">
+         <div class="col-lg-2"> <img class="pull-right img-rounded" src="media/{{post.icon }}" width="100" alt=""></div>
+         <div class="col-lg-10">
+        <h5><a href="news/{{ post.link }}">{{ post.title }}</a></h5>
+         <p>Опубліковано: {{ post.published_date }}</p>
+        {{ post.annonce|safe }}  <a href="news/{{ post.link }}">read more</a>
+         </div>
+
+    </div>
+
+{% endfor %}
+</div>
+</div>
+
+{% endblock %}
