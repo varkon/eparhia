@@ -12,6 +12,7 @@ body {
 
 .wrap > .container {
     padding: 70px 15px 20px;
+    margin-top:70px;
 }
 
 .footer {
