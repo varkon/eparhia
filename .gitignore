@@ -102,3 +102,4 @@ ENV/
 
 #settings
 /eparhia/settings.py
+/eparhia/.idea/
