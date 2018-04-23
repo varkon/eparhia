@@ -1,0 +1,26 @@
+{% extends "main_template.html" %}
+{% block title %}{{post.title}}{% endblock title %}
+{% block breadcrumbs %}<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/">Головна</a></li>
+  <li class="breadcrumb-item"><a href="/news">Новини</a></li>
+  <li class="breadcrumb-item active">{{post.title}}</li>
+</ol>{% endblock %}
+{% block content %}
+
+
+<div class="body-content notabene">
+
+
+    <h3>{{post.title}}</h3>
+
+<div class="row">
+
+     <div class="col-lg-12">
+         <p>Опубліковано: {{ post.published_date }}</p>
+        {{ post.body|safe }}
+         </div>
+
+    </div>
+
+</div>
+{% endblock %}
