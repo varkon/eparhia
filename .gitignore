@@ -103,3 +103,4 @@ ENV/
 #settings
 /eparhia/settings.py
 /.idea/
+/static/
