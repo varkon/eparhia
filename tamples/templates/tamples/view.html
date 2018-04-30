@@ -1,0 +1,36 @@
+{% extends "main_template.html" %}
+{% block title %}{{post.title}}{% endblock title %}
+{% block breadcrumbs %}<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/">Головна</a></li>
+  <li class="breadcrumb-item"><a href="/temples">Храми</a></li>
+  <li class="breadcrumb-item active">{{post.title}}</li>
+</ol>{% endblock %}
+{% block content %}
+
+
+<div class="body-content notabene">
+
+
+    <h3>{{post.title}}</h3>
+
+<div class="row">
+
+     <div class="col-lg-12">
+         <p> Дата закаладення храму: {{post.created_date}}</p>
+         <p> Дата освячування : {{ post.published_date }}</p>
+         <p> Настоятель : {{post.abbot}}</p>
+         <p> Адреса: {{post.address}}</p>
+         <p> Місто : {{post.city}}</p>
+         <h6>Телефони:</h6>
+         {% if phones.count > 1 %}
+         {% for phone in phones %}
+           <p>{{phone.phonenumber}} {{phone.phonename}}</p>
+         {% endfor %}
+         {% endif %}
+        {{ post.body|safe }}
+         </div>
+
+    </div>
+
+</div>
+{% endblock %}
