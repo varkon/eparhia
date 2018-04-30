@@ -102,6 +102,6 @@ ENV/
 
 #settings
 /eparhia/settings.py
-/.idea/
-/static/
-/media/
+/.idea/*
+/static/*
+/media/*
