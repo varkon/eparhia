@@ -2,7 +2,7 @@
 {% block title %}{{post.title}}{% endblock title %}
 {% block breadcrumbs %}<ol class="breadcrumb">
   <li class="breadcrumb-item"><a href="/">Головна</a></li>
-  <li class="breadcrumb-item"><a href="/temples">Храми</a></li>
+  <li class="breadcrumb-item"><a href="/tamples">Храми</a></li>
   <li class="breadcrumb-item active">{{post.title}}</li>
 </ol>{% endblock %}
 {% block content %}
@@ -17,7 +17,9 @@
 
      <div class="col-lg-12">
          <p> Дата закаладення храму: {{post.created_date}}</p>
+         {% if post.published_date != None %}
          <p> Дата освячування : {{ post.published_date }}</p>
+         {% endif %}
          <p> Настоятель : {{post.abbot}}</p>
          <p> Адреса: {{post.address}}</p>
          <p> Місто : {{post.city}}</p>

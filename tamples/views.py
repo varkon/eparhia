@@ -5,7 +5,7 @@ from .models import Tample
 
 
 def tamples_list(request):
-    tamples = Tample.objects.all().order_by("title")
+    tamples = Tample.objects.all().order_by("created_date")
     return render(request, 'tamples/index.html', {'tamples':tamples})
 
 def detail_tample(request, path):

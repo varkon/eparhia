@@ -1,5 +1,5 @@
 from django.db import models
-from django.utils import timezone
+import datetime
 from tinymce.models import HTMLField
 from filebrowser.fields import FileBrowseField
 from eparhiapp.apps import transliterate
@@ -14,9 +14,9 @@ class Tample(models.Model):
     abbot = models.CharField(max_length = 255, verbose_name='Настоятель')
     link = models.CharField(max_length=255, verbose_name='Посилання', unique=True, blank=True)
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
-    created_date = models.DateTimeField(
-        default=timezone.now)
-    published_date = models.DateTimeField(
+    created_date = models.DateField(
+        default=datetime.date.today)
+    published_date = models.DateField(
         blank=True, null=True)
     icon = FileBrowseField("Зображення", max_length=250, directory="uploads/", extensions=[".jpg", "jpeg", "png"],
                            null=True)
@@ -27,7 +27,7 @@ class Tample(models.Model):
         super(Tample, self).save(*args, **kwargs)
 
     def publish(self):
-        self.published_date = timezone.now()
+        self.published_date = datetime.now()
         if (self.link == ""):
             self.link = transliterate(self.title)
         self.save()
