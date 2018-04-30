@@ -101,7 +101,7 @@ ENV/
 .mypy_cache/
 
 #settings
-/eparhia/settings.py
-/.idea/*
-/static/*
-/media/*
+eparhia/settings.py
+.idea/*
+static/*
+media/*
