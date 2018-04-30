@@ -23,8 +23,8 @@
          <p> Настоятель : {{post.abbot}}</p>
          <p> Адреса: {{post.address}}</p>
          <p> Місто : {{post.city}}</p>
-         <h6>Телефони:</h6>
-         {% if phones.count > 1 %}
+         {% if phones.count > 0 %}
+            <h6>Телефони</h6>
          {% for phone in phones %}
            <p>{{phone.phonenumber}} {{phone.phonename}}</p>
          {% endfor %}
