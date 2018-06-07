@@ -99,7 +99,7 @@ input[type="text"] {
 	}
 
 .text{
-	width:100%px;
+	width:820px;
 	margin:15px;
 	padding:15px;
 	float:left;
@@ -137,17 +137,5 @@ p {
 	text-align:left;
 	}
 
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-    .modal-content {
-        width: 100%;
-    }
-}
 
-@media (min-width:768px){
-    #back-top {
-        position: fixed;
-        bottom: 60px;
-        right: 3%;
-    }
-}
+
