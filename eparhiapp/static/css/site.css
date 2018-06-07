@@ -555,11 +555,10 @@ img {
 	}
 
 #footer {
-	background:url(bottom_buttons.png) repeat-x; 
+	background:url(../images/bottom_buttons.png) repeat-x;
 	width:1070px!important; 
 	vertical-align:top;
 	text-align:center;
-	height:67px;
 	padding-top:10px;
 	background-color: #6b6c77
 	}
