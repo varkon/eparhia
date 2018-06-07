@@ -339,7 +339,7 @@ a.desc:after {
 .img-thumbnail{
     border-radius: 20px;
 }
-
+/*
 #back-top {
     position: fixed;
     bottom: 60px;
@@ -351,7 +351,7 @@ a.desc:after {
     height: 100px;
     display: block;
     margin-bottom: 7px;
-}
+}*/
 /*C-Carusel*/
 .c-carousel {
     width: 100%;
@@ -518,8 +518,7 @@ img {
 	margin-left:auto; 
 	margin-right:auto; 
 	margin-top:0; 
-	/*width:1070px!important;*/
-	height:inherit;
+	width:1070px!important;
 	vertical-align:top;
 	background-color: #fff;
 	border: 1px solid #828080;
@@ -541,7 +540,7 @@ img {
 	width:1070px!important; 
 	height: 35px!important;
 	vertical-align: middle;
-	background:url(top_buttons.png) repeat-x;
+	background:url(../images/top_buttons.png) repeat-x;
 	}
 	
 .mb_buttons {
