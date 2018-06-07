@@ -502,7 +502,7 @@ a.desc:after {
 }
 /*style.php*/
 body {
-	background:url(../images/vyshyvanka.png); 
+	background:url(../images/vyshyvanka.png);
 	margin: 0px; 
 	padding: 0px; 
 	background-color: #fff
@@ -518,7 +518,7 @@ img {
 	margin-left:auto; 
 	margin-right:auto; 
 	margin-top:0; 
-	width:1070px!important; 
+	/*width:1070px!important;*/
 	height:inherit;
 	vertical-align:top;
 	background-color: #fff;
@@ -529,7 +529,7 @@ img {
 	width:1070px!important; 
 	height: 175px;
 	vertical-align:top;
-	background:url(top.png) no-repeat;
+	background:url(../images/top.png) no-repeat;
 	}
 
 .fb_style {
