@@ -500,6 +500,146 @@ a.desc:after {
 .nav img{
     margin-top: -5px;
 }
+#style.php
+body {
+	background:url(../images/vyshyvanka.png); 
+	margin: 0px; 
+	padding: 0px; 
+	background-color: #fff
+	}
+
+img {
+	border:0; 
+	margin:0; 
+	padding:0
+	}
+
+#wrapper {
+	margin-left:auto; 
+	margin-right:auto; 
+	margin-top:0; 
+	width:1070px!important; 
+	height:inherit;
+	vertical-align:top;
+	background-color: #fff;
+	border: 1px solid #828080;
+	}
+	
+#header {
+	width:1070px!important; 
+	height: 175px;
+	vertical-align:top;
+	background:url(top.png) no-repeat;
+	}
+
+.fb_style {
+	padding-left:1000;
+	padding-top:20px
+	}
+
+#top_buttons {
+	width:1070px!important; 
+	height: 35px!important;
+	vertical-align: middle;
+	background:url(top_buttons.png) repeat-x;
+	}
+	
+.mb_buttons {
+	padding-top:8px;
+	padding-left:31;
+	}
+
+#center {
+	width:100%; 
+	vertical-align:top;
+	height:100%
+	}
+
+#footer {
+	background:url(bottom_buttons.png) repeat-x; 
+	width:1070px!important; 
+	vertical-align:top;
+	text-align:center;
+	height:67px;
+	padding-top:10px;
+	background-color: #6b6c77
+	}
+
+.footer_text {
+	color:#b6b7bc; 
+	font-family:sans-serif; 
+	font-size:14px; 
+	font-style:normal; 
+	text-decoration:none;
+	text-align:center;
+	}
+
+.right_board{
+	width:240px;
+	margin:15px;
+	float:right;
+	vertical-align:top;
+	}
+
+input[type="text"] {
+   border: 1px solid #bbc1d1;
+   border-radius: 3px;
+   background: #c7cbd8 !important;
+   outline: none;
+   height: 32px;
+   width: 240px;
+   color: #6c6f7c;
+   font-size: 11px;
+   font-family: Tahoma;
+}
+
+.subname 	{
+	color:#3a3c42; 
+	font-family:sans-serif; 
+	font-size:16px; 
+	font-style:normal; 
+	text-decoration:none; 
+	text-align:center;
+	}
+
+.text{
+	width:100%px;
+	margin:15px;
+	padding:15px;
+	float:left;
+	vertical-align:top;
+	border: 1px solid #bbc1d1;
+	}
+	
+p {
+	color:#0a3d4a; 
+	font-family:sans-serif; 
+	font-size:14px; 
+	font-style:normal; 
+	text-decoration:none; 
+	text-align:justify;
+	padding-top:10px;
+	}
+	
+.name {
+	color:#ff4800; 
+	font-family:sans-serif; 
+	font-size:18px; 
+	font-style:normal; 
+	font-weight:bold;
+	text-decoration:none; 
+	text-align:left;
+	padding-top:0px;
+	}
+	
+.subname {
+	color:#22647c; 
+	font-family:sans-serif; 
+	font-size:16px; 
+	font-style:normal; 
+	text-decoration:none; 
+	text-align:left;
+	}
 
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
