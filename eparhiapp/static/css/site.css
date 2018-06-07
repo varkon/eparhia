@@ -55,9 +55,9 @@ img {
 
 #footer {
 	background:url(../images/bottom_buttons.png) repeat-x;
-	width:1070px!important; 
+	width:100%;
 	vertical-align:top;
-	height:67px;
+	height:120px;
 	overflow:auto;
 	text-align:center;
 	padding-top:10px;
