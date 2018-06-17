@@ -1,8 +1,8 @@
 {% extends "main_template.html" %}
-{% block title %}Архієпископ{% endblock title %}
+{% block title %}Архієрей{% endblock title %}
 {% block breadcrumbs %}<ol class="breadcrumb">
   <li class="breadcrumb-item"><a href="/">Головна</a></li>
-   <li class="breadcrumb-item active">Архієпископ</li>
+   <li class="breadcrumb-item active">Архієрей</li>
 </ol>{% endblock %}
 {% block content %}
 {# Hero Section #}
@@ -32,7 +32,7 @@
 {% else %}
   <h2>{{about_model.title}}</h2>
     <div class="row">
-    {{ post.body|safe }}
+    {{ about_model.body|safe }}
     </div>
 {% endif %}
 </div>
