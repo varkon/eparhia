@@ -28,3 +28,6 @@ def archbishop(request):
         return render(request,'archbishop.html', {'about_model':None})
     return render(request,'archbishop.html', {'about_model':about_model})
 
+def articles(request) :
+    return render(request,'articles.html', {'about_model':None})
+
