@@ -7,7 +7,7 @@ def deanery_list(request):
     deanery = Deanery.objects.all()
     if deanery.count() == 0 :
         return tamples_list(request,1)
-    contacts = deanery.contacts_set.all()
+    contacts = deanery.deanerycontacts_set.all()
     return render(request, 'tamples/index.html',{'deanery':deanery, 'contacts':contacts})
 
 def tamples_list(request, id):
