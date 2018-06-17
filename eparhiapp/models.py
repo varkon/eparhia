@@ -71,7 +71,7 @@ class Archbishop(models.Model):
 
     def __str__(self):
         return self.title
-    
+
 class About(models.Model):
     title = models.CharField(max_length=255, verbose_name='Заголовок')
     annonce = HTMLField(verbose_name='Анонс (не обовьязково - зараз не використовується)', null = True, blank = True)

@@ -12,13 +12,19 @@ def index(request) :
 
 def about(request):
     about_model = About.objects.all().order_by('-id')[0]
+    if not about_model :
+        return render(request,'about.html', {'about_model': None})
     return render(request,'about.html', {'about_model':about_model})
 
 def patriarch(request):
     about_model = Patriarch.objects.all().order_by('-id')[0]
+    if not about_model :
+        return render(request,'patriarch.html', {'about_model': None})
     return render(request,'patriarch.html', {'about_model':about_model})
 
 def archbishop(request):
     about_model = Archbishop.objects.all().order_by('-id')[0]
+    if not about_model :
+        return render(request,'archbishop.html', {'about_model':None})
     return render(request,'archbishop.html', {'about_model':about_model})
 
