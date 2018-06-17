@@ -24,7 +24,7 @@ class Patriarch(models.Model):
     # this is not needed for create link
     def save(self, *args, **kwargs):
         self.createlink()
-        super(News, self).save(*args, **kwargs)
+        super(Patriarch, self).save(*args, **kwargs)
 
     def publish(self):
         self.published_date = timezone.now()
@@ -57,7 +57,7 @@ class Archbishop(models.Model):
     # this is not needed for create link
     def save(self, *args, **kwargs):
         self.createlink()
-        super(News, self).save(*args, **kwargs)
+        super(Archbishop, self).save(*args, **kwargs)
 
     def publish(self):
         self.published_date = timezone.now()
@@ -90,7 +90,7 @@ class About(models.Model):
     # this is not needed for create link
     def save(self, *args, **kwargs):
         self.createlink()
-        super(News, self).save(*args, **kwargs)
+        super(About, self).save(*args, **kwargs)
 
     def publish(self):
         self.published_date = timezone.now()
