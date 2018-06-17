@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.utils import timezone
 from news.models import News
+from eparhiapp.models import Patriarch, Archbishop, About
 
 # Create your views here.
 
@@ -10,4 +11,14 @@ def index(request) :
     return render(request, 'index.html', {'news': news})
 
 def about(request):
-    return render(request,'about.html')
+    about_model = About.objects.all().order_by('-id')[0]
+    return render(request,'about.html', {'about_model':about_model})
+
+def patriarch(request):
+    about_model = Patriarch.objects.all().order_by('-id')[0]
+    return render(request,'patriarch.html', {'about_model':about_model})
+
+def archbishop(request):
+    about_model = Archbishop.objects.all().order_by('-id')[0]
+    return render(request,'archbishop.html', {'about_model':about_model})
+

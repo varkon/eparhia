@@ -17,6 +17,10 @@ class News(models.Model) :
             blank=True, null=True)
     icon = FileBrowseField("Зображення", max_length=250, directory="uploads/", extensions=[".jpg","jpeg","png"], null=True)
 
+    class Meta:
+        verbose_name = 'Новина'
+        verbose_name_plural = 'Новини'
+
     # this is not needed for create link
     def save(self, *args, **kwargs):
         self.createlink()
