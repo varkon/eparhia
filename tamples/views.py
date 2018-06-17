@@ -7,8 +7,8 @@ def deanery_list(request):
     deanery = Deanery.objects.all()
     if deanery.count() == 0 :
         return tamples_list(request,1)
-    contacts = deanery.deanerycontacts_set.all()
-    return render(request, 'tamples/index.html',{'deanery':deanery, 'contacts':contacts})
+   # contacts = deanery.deanerycontacts_set.all()
+    return render(request, 'tamples/index.html',{'deanery':deanery})
 
 def tamples_list(request, id):
     tamples = Tample.objects.filter(city_id = id).order_by("created_date")
