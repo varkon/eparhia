@@ -38,6 +38,7 @@ img {
 	width:1070px!important; 
 	height: 35px!important;
 	vertical-align: middle;
+	magrgin-left: 10px;
 	background:url(../images/top_buttons.png) repeat-x;
 	}
 	

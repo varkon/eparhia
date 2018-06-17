@@ -3,7 +3,8 @@
 {% block breadcrumbs %}
 <ol class="breadcrumb">
   <li class="breadcrumb-item"><a href="/">Головна</a></li>
-  <li class="breadcrumb-item active">Благочиння</li>
+  <li class="breadcrumb-item"><a href="/deanry">Благочиння</a></li>
+  <li class="breadcrumb-item active">Храми</li>
 </ol>
 {% endblock %}
 {% block content %}
@@ -12,28 +13,18 @@
 <div class="text">
 
 
-    <h2>Благочиння епархії</h2>
+    <h2>Храми </h2>
 
 <div class="row">
-  {% for post in deanery %}
+  {% for post in tamples %}
      <div class="col-lg-12" style="padding-top:10px;"><a href="{{ post.link }}">
-         <p>{{post.title}}</p>
-     </a>
-         {% if post.abbot != None %}
-         <p>: {{post.abbot}}</p>
-         {% endif %}
-         {% if post.description != None %}
-         <p>{{post.description}}</p>
-         {% endif %}
-          {% if contacts.count > 0 %}
-            <h6>Контакти:</h6>
-         {% for phone in contacts %}
-           <p>{{phone.contact}} {{phone.description}}</p>
-         {% endfor %}
-         {% endif %}
-
-
-
+         <div class="col-lg-4"> <img class="img-responsive center-block" src="media/{{post.icon }}" width="200" alt=""></div>
+         <div class="col-lg-8">
+        <h5><a href="{{ post.link }}">{{ post.title }}</a></h5>
+             <p>Настоятель: {{post.abbot}}</p>
+             <p>Адреса: {{post.address}}</p>
+         </div>
+          </a>
     </div>
 <br/><hr/><br/>
     {% endfor %}
