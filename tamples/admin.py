@@ -18,4 +18,5 @@ class DeaneryAdmin(admin.ModelAdmin):
     inlines = [ContactsInLine]
 
 admin.site.register(Tample, TampleAdmin)
+admin.site.register(Deanery, DeaneryAdmin)
 
