@@ -34,7 +34,7 @@ class DeaneryContacts(models.Model):
 class Tample(models.Model):
     title = models.CharField(max_length = 255, verbose_name='Назва')
     address = models.CharField(max_length = 255, verbose_name='Адреса')
-    city = models.ForeignKey(Deanery, on_delete = models.CASCADE, verbose_name = 'Благочиння', default = 1)
+    city = models.ForeignKey(Deanery, on_delete = models.CASCADE, verbose_name = 'Благочиння')
     body = HTMLField(verbose_name='Опис')
     abbot = models.CharField(max_length = 255, verbose_name='Настоятель')
     link = models.CharField(max_length=255, verbose_name='Посилання', unique=True, blank=True)
