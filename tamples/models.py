@@ -7,8 +7,8 @@ from eparhiapp.apps import transliterate
 # Create your models here.
 class Deanery(models.Model):
     title = models.CharField(max_length = 255, verbose_name = 'Назва')
-    abbot = models.CharField(max_length = 255, null= True, verbose_name = 'Благочинний')
-    description = HTMLField(null = True, verbose_name = 'Детальний опис')
+    abbot = models.CharField(max_length = 255, null= True, blank= True, verbose_name = 'Благочинний')
+    description = HTMLField(null = True, blank = True, verbose_name = 'Детальний опис')
     link = models.CharField(max_length=255, verbose_name='Посилання', unique=True, blank=True)
 
     def save(self, *args, **kwargs):
