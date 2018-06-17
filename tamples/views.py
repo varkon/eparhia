@@ -14,7 +14,7 @@ def tamples_list(request, id):
     tamples = Tample.objects.filter(city_id = id).order_by("created_date")
     return render(request, 'tamples/index_tample.html', {'tamples':tamples})
 
-def detail_tample(request, path):
-    post = Tample.objects.get(link = path)
+def detail_tample(request, id, path):
+    post = Tample.objects.get(link = path, city_id = id)
     phones = post.tamplephone_set.all()
     return render(request, 'tamples/view.html', {'post': post, 'phones':phones})
