@@ -27,6 +27,7 @@ urlpatterns = [
     path('tinymce/', include('tinymce.urls')),
     path('', include('eparhiapp.urls')),
     path('news/', include('news.urls')),
+    path('articles/', include('articles.urls')),
     path('deanery/', include('tamples.urls')),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

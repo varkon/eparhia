@@ -8,7 +8,7 @@ from eparhiapp.models import Patriarch, Archbishop, About
 
 def index(request) :
     news = News.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[:10]
-    return render(request, 'index.html', {'news': news})
+    return render(request, 'index.html', {'articles': news})
 
 def about(request):
     about_model = About.objects.all().order_by('-id').first()
@@ -28,6 +28,6 @@ def archbishop(request):
         return render(request,'archbishop.html', {'about_model':None})
     return render(request,'archbishop.html', {'about_model':about_model})
 
-def articles(request) :
-    return render(request,'articles.html', {'about_model':None})
+# def articles(request) :
+#     return render(request,'articles.html', {'about_model':None})
 
