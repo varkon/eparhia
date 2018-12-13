@@ -9,7 +9,7 @@ from eparhiapp.models import Patriarch, Archbishop, About
 
 def index(request) :
     news = News.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[:10]
-    articles = Article.filter(published_date__lte=timezone.now()).order_by('-published_date')[:5]
+    articles = Article.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[:5]
     return render(request, 'index.html', {'news': news, 'articles':articles})
 
 def about(request):
