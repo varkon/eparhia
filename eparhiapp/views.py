@@ -26,15 +26,17 @@ def patriarch(request):
 
 def archbishop(request):
     about_model = Archbishop.objects.all().order_by('-id').first()
+    caption = "Архієрей"
     if not about_model :
-        return render(request,'archbishop.html', {'about_model':None})
-    return render(request,'archbishop.html', {'about_model':about_model})
+        return render(request,'archbishop.html', {'about_model':None, 'caption':caption})
+    return render(request,'archbishop.html', {'about_model':about_model, 'caption':caption})
 
 def primat(request):
     about_model = Primat.objects.all().order_by('-id').first()
+    caption = "Предстоятель"
     if not about_model:
-        return render(request, 'archbishop.html', {'about_model': None})
-    return render(request, 'archbishop.html', {'about_model': about_model})
+        return render(request, 'archbishop.html', {'about_model': None, 'caption':caption})
+    return render(request, 'archbishop.html', {'about_model': about_model, 'caption':caption})
 
 # def articles(request) :
 #     return render(request,'articles.html', {'about_model':None})
