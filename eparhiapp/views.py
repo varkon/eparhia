@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.utils import timezone
 from news.models import News
 from articles.models import Article
-from eparhiapp.models import Patriarch, Archbishop, About
+from eparhiapp.models import Patriarch, Archbishop, Primat, About
 
 # Create your views here.
 
@@ -29,6 +29,12 @@ def archbishop(request):
     if not about_model :
         return render(request,'archbishop.html', {'about_model':None})
     return render(request,'archbishop.html', {'about_model':about_model})
+
+def primat(request):
+    about_model = Primat.objects.all().order_by('-id').first()
+    if not about_model:
+        return render(request, 'archbishop.html', {'about_model': None})
+    return render(request, 'archbishop.html', {'about_model': about_model})
 
 # def articles(request) :
 #     return render(request,'articles.html', {'about_model':None})

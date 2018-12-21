@@ -72,6 +72,40 @@ class Archbishop(models.Model):
     def __str__(self):
         return self.title
 
+class Primat(models.Model):
+    title = models.CharField(max_length=255, verbose_name='Заголовок')
+    annonce = HTMLField(verbose_name='Анонс (не обовьязково - зараз не використовується)', null = True, blank = True)
+    body = HTMLField(verbose_name='Повний текст')
+    link = models.CharField(max_length=255, verbose_name='Посилання', unique=True, blank=True, default = "primat")
+    author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
+    created_date = models.DateTimeField(
+        default=timezone.now)
+    published_date = models.DateTimeField(
+        blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'Предстоятель'
+        verbose_name_plural = 'Предстоятелі'
+
+    # this is not needed for create link
+    def save(self, *args, **kwargs):
+        self.createlink()
+        super(Primat, self).save(*args, **kwargs)
+
+    def publish(self):
+        self.published_date = timezone.now()
+        if (self.link == ""):
+            self.link = transliterate(self.title)
+        self.save()
+
+    def createlink(self):
+        if (self.link == ""):
+            self.link = transliterate(self.title)
+
+    def __str__(self):
+        return self.title
+
+
 class About(models.Model):
     title = models.CharField(max_length=255, verbose_name='Заголовок')
     annonce = HTMLField(verbose_name='Анонс (не обовьязково - зараз не використовується)', null = True, blank = True)

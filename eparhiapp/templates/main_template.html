@@ -4,87 +4,103 @@
 
 <!DOCTYPE html>
 <html>
-    {# Make modifiable head elements #}
-    <head>
-        <title>{% block title %}Головна {% endblock title %} | Одесько-Балське епархіаьне управління</title>
-        {% block head_favicon %}
-            <link rel="icon" type="image/png"
-                  href="{{ STATIC_URL }}images/favicon.ico">
-        {% endblock head_favicon %}
-        {% block head_meta %}
-            {% block head_meta_charset %}
-                <meta http-equiv="Content-Type"
-                      content="text/html; charset=utf-8" />
-            {% endblock head_meta_charset %}
-            {% block head_meta_contentlanguage %}
-                <meta http-equiv="Content-Language" value="uk" />
-            {% endblock head_meta_contentlanguage %}
-            {# % block head_meta_viewport % #}
-                <meta name="viewport"
-                      content="width=device-width, initial-scale=1.0">
-            {#% endblock head_meta_viewport % #}
-        {% endblock head_meta %}
+{# Make modifiable head elements #}
+<head>
+    <title>{% block title %}Головна {% endblock title %} | Одесько-Балське епархіаьне управління</title>
+    {% block head_favicon %}
+    <link rel="icon" type="image/png"
+          href="{{ STATIC_URL }}images/favicon.ico">
+    {% endblock head_favicon %}
+    {% block head_meta %}
+    {% block head_meta_charset %}
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=utf-8"/>
+    {% endblock head_meta_charset %}
+    {% block head_meta_contentlanguage %}
+    <meta http-equiv="Content-Language" value="uk"/>
+    {% endblock head_meta_contentlanguage %}
+    {# % block head_meta_viewport % #}
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    {#% endblock head_meta_viewport % #}
+    {% endblock head_meta %}
 
 
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css" media="screen">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.css" media="screen">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" media="screen">
+    <link href="{% static 'css/site.css' %}"
+          rel="stylesheet" media="screen">
 
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"  media="screen">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css" media="screen">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.css"  media="screen">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"  media="screen">
-                <link href="{% static 'css/site.css' %}"
-                      rel="stylesheet" media="screen">
-
-    </head>
-<body >
-    {# Navigation Menu #}
-    <div id="wrapper">
-   <div id="header">
-		<a href="https://www.facebook.com/od.eparchy/" target="new"><img src="{% static 'images/fb.png' %}" width="36" height="36" border="0" class="fb_style"></a>
-	</div>
+</head>
+<body>
+{# Navigation Menu #}
+<div id="wrapper">
+    <div id="header">
+        <a href="https://www.facebook.com/od.eparchy/" target="new"><img src="{% static 'images/fb.png' %}" width="36"
+                                                                         height="36" border="0" class="fb_style"></a>
+    </div>
     <div id="top_buttons">
-    	<a href="/patriarch"><img src="{% static 'images/mt_01.png' %}" width="67" height="22" alt="Патріарх" class="mb_buttons"></a>
-        <img src="{% static 'images/spaser.png' %}" width="1" height="22" alt="" class="mb_buttons">
-    	<a href="/archbishop"><img src="{% static 'images/mt_02.png' %}" width="67" height="22" alt="Архієрей" class="mb_buttons"></a>
-        <img src="{% static 'images/spaser.png' %}" width="1" height="22" alt="" class="mb_buttons">
-    	<a href="/deanery"><img src="{% static 'images/mt_03.png' %}" width="49" height="22" alt="Храми" class="mb_buttons"></a>
-        <img src="{% static 'images/spaser.png' %}" width="1" height="22" alt="" class="mb_buttons">
-    	<a href="/news"><img src="{% static 'images/mt_05.png' %}" width="57" height="22" alt="Новини" class="mb_buttons"></a>
-        <img src="{% static 'images/spaser.png' %}" width="1" height="22" alt="" class="mb_buttons">
-    	<a href="/articles"><img src="{% static 'images/mt_06.png' %}" width="43" height="22" alt="Статті" class="mb_buttons"></a>
-        <img src="{% static 'images/spaser.png' %}" width="1" height="22" alt="" class="mb_buttons">
-    	<a href="{% static 'images/small_kalendar_2018.pdf' %}"><img src="{% static 'images/mt_07.png' %}" width="72" height="22" alt="Календар" class="mb_buttons"></a>
-        <img src="{% static 'images/spaser.png' %}" width="1" height="22" alt="" class="mb_buttons">
-    	<a href="/about"><img src="{% static 'images/mt_08.png' %}" width="69" height="22" alt="Контакти" class="mb_buttons"></a>
+        <ul class="nav navbar-nav menu">
+            <li>
+                <a class="mb_buttoms" href="/patriarch">Патріарх</a>
+            </li>
+            <li>
+                <a class="mb_buttoms" href="/primate">Предстоятель</a>
+            </li>
+            <li>
+                <a class="mb_buttoms" href="/archbishop">Архієрей</a>
+            </li>
+            <li>
+                <a class="mb_buttoms" href="/deanery">Благочиння та храми</a>
+            </li>
+            <li>
+                <a class="mb_buttoms" href="/news">Новини</a>
+            </li>
+            <li>
+                <a class="mb_buttoms" href="/articles">Статті</a>
+            </li>
+            <li>
+                <a class="mb_buttoms" href="/about">Контакти</a>
+            </li>
+
+        </ul>
+
     </div>
     {# The Document Body #}
     <div id="center">
         {% block breadcrumbs %}{% endblock %}
 
         {% block content %}
-            if you see this, something is wrong!
+        if you see this, something is wrong!
         {% endblock content %}
     </div> <!--center-->
 
     {# The Footer #}
     <div id="footer">
 
-             <p class="pull-left">&copy; Varkon Ltd 2018</p>
-         <ul id="w3" class="navbar-nav navbar-right nav"><li><a href="/news/">Новини</a></li>
-<li><a href="/about/">Контакти</a></li>
-<li><a href="https://www.facebook.com/od.eparchy/" target="_blank"><img class="pull-left" src="{% static 'images/Facebook32.png' %}" alt="Одесько-Балська епархія"></a></li>
-</ul>
+        <p class="pull-left">&copy; Varkon Ltd 2018</p>
+        <ul id="w3" class="navbar-nav navbar-right nav">
+            <li><a href="/news/">Новини</a></li>
+            <li><a href="/about/">Контакти</a></li>
+            <li><a href="https://www.facebook.com/od.eparchy/" target="_blank"><img class="pull-left"
+                                                                                    src="{% static 'images/Facebook32.png' %}"
+                                                                                    alt="Одесько-Балська епархія"></a>
+            </li>
+        </ul>
 
     </div>
-    </div>
+</div>
 </body>
 {# Set of blocks that can be used to display JavaScript files #}
-    {% block footer_javascript %}
-        {% block footer_javascript_site %}
-            <script src="{% static 'js/jquery.min.js' %}"></script>
-            <script src="{% static 'js/bootstrap.min.js' %}"></script>
-            <script src="{{ STATIC_URL }}js/app.js"></script>
-        {% endblock footer_javascript_site %}
-        {% block footer_javascript_section %}{% endblock footer_javascript_section %}
-        {% block footer_javascript_page %}{% endblock footer_javascript_page %}
-    {% endblock footer_javascript %}
+{% block footer_javascript %}
+{% block footer_javascript_site %}
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{{ STATIC_URL }}js/app.js"></script>
+{% endblock footer_javascript_site %}
+{% block footer_javascript_section %}{% endblock footer_javascript_section %}
+{% block footer_javascript_page %}{% endblock footer_javascript_page %}
+{% endblock footer_javascript %}
 </html>

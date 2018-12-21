@@ -36,15 +36,14 @@ img {
 
 #top_buttons {
 	width:1070px!important; 
-	height: 35px!important;
+	/*height: 35px!important;*/
 	vertical-align: middle;
-	magrgin-left: 10px;
-	background:url(../images/top_buttons.png) repeat-x;
+	background-color:#5d9ea1;
 	}
 	
 .mb_buttons {
-	padding-top:8px;
-	padding-left:31;
+	text-transform:uppercase;
+	font-weight: bold;
 	}
 
 #center {
