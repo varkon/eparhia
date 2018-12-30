@@ -124,6 +124,6 @@ def getPatriarhiaNew():
     page = requests.get(url)
     soup = BeautifulSoup(page.text, 'html.parser')
 
-    return soup.find_all(class_='item')
+    return soup.find_all(class_='news')
 
 
