@@ -55,8 +55,9 @@
 </div>
 
 <div class="text">
-{{ patriarhia | safe }}
-
+    {% for row_content in patriarhia %}
+{{ row_content | safe }}
+{% endfor %}
 
 </div>
 
