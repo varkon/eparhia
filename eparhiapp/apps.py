@@ -136,7 +136,9 @@ def getPatriarhiaNew():
                 link0 = 'https://www.cerkva.info'+ links.get('href')
                 link_name = links.contents[0]
                 request_result.append('<a href="'+link0+'" target="_blank" >'+link_name+'</a> :')
-             
+             else :
+                 data  = '<div>'+ links.contents[0]+'</div>'
+                 request_result.append(data)
          request_result.append('</div>')
 
     return request_result
