@@ -132,7 +132,10 @@ def getPatriarhiaNew():
     # for content in full_contents :
     #     link = 'https://www.cerkva.info'+ content.get('href')
     #     request_result = {content.contents[0]:link}
-
-    return full_contents
+    str_full_contents = ''.join(full_contents)
+    str_full_contents.replace("[","")
+    str_full_contents.replace("]", "")
+    str_full_contents.replace(",", "")
+    return str_full_contents
 
 
