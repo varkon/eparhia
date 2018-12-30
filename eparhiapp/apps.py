@@ -125,7 +125,7 @@ def getPatriarhiaNew():
     soup = BeautifulSoup(page.text, 'html.parser')
     remove_link = soup.find('div', class_='banner')
     remove_link.decompose()
-    all_link = soup.find('div', class_='item', limit=10)
+    all_link = soup.find('div', class_='item')
     request_result = {};
     links_all = all_link.find('a')
     for content in links_all :
