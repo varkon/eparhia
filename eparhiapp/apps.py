@@ -123,7 +123,15 @@ def getPatriarhiaNew():
     url = "https://www.cerkva.info/posts"
     page = requests.get(url)
     soup = BeautifulSoup(page.text, 'html.parser')
+    remove_link = soup.find('div', class_='banner')
+    remove_link.decompose()
+    all_link = soup.find_all('div', class_='item', limit=10)
+    request_result = {};
+    links_all = all_link.find_all('a')
+    for content in links_all :
+        link = 'https://www.cerkva.info'+ content.get('href')
+        request_result = {content.contents[0]:link}
 
-    return soup.find_all(class_='news')
+    return request_result
 
 
