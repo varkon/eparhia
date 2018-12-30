@@ -127,7 +127,7 @@ def getPatriarhiaNew():
     remove_link.decompose()
     all_link = soup.find_all('div', class_='item', limit=10)
     request_result = {};
-    links_all = all_link.find_all('a')
+    links_all = all_link.find('a')
     for content in links_all :
         link = 'https://www.cerkva.info'+ content.get('href')
         request_result = {content.contents[0]:link}
