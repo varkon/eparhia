@@ -127,12 +127,15 @@ def getPatriarhiaNew():
     # remove_link = full_contents.find('div', class_='banner')
     # remove_link.decompose()
     # all_link = full_contents.find('div', class_='item')
-    #request_result = {};
+    request_result = list();
     #links_all = all_link.find('a')
-    # for content in full_contents :
-    #      link = 'https://www.cerkva.info'+ content.get('href')
-    #      request_result = {content.contents[0]:link}
+    for row_content in full_contents :
+         for links in row_content:
+             link0 = 'https://www.cerkva.info'+ links[0].get('href')
+             link1 = 'https://www.cerkva.info'+ links[1].get('href')
+             data_news = links[2]
+             request_result = (link0,link1,data_news)
 
-    return full_contents
+    return request_result
 
 
