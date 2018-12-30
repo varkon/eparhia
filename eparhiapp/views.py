@@ -3,14 +3,15 @@ from django.utils import timezone
 from news.models import News
 from articles.models import Article
 from eparhiapp.models import Patriarch, Archbishop, Primat, About
-
+from .apps import getPatriarhiaNew
 # Create your views here.
 
 
 def index(request) :
     news = News.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[:5]
     articles = Article.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[:5]
-    return render(request, 'index.html', {'news': news, 'articles':articles})
+    patriarhia = getPatriarhiaNew()
+    return render(request, 'index.html', {'news': news, 'articles':articles, 'patriarhia':patriarhia})
 
 def about(request):
     about_model = About.objects.all().order_by('-id').first()

@@ -1,4 +1,6 @@
 from django.apps import AppConfig
+import requests
+from bs4 import BeautifulSoup
 
 
 class EparhiappConfig(AppConfig):
@@ -116,3 +118,12 @@ def transliterate(str):
     for pair in ISO9PAIRS:
         str = str.replace(pair[0], pair[1])
     return str
+
+def getPatriarhiaNew():
+    url = "https://www.cerkva.info/posts"
+    page = requests.get(url)
+    soup = BeautifulSoup(page.text, 'html.parser')
+
+    return soup.find_all(class='item')
+
+

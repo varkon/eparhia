@@ -8,8 +8,22 @@
 			</form>
 
             <!--Вставить виджет календарь-->
+       <div class="text">
+        <h2><a href="articles">Нові сттаті на сайті</a></h2>
+    <div>
+        <div class="row">
+  {% for post in articles %}
 
 
+     <div class="col-sm-2">
+
+         <div class="col-sm-2">
+        <h5><a href="articles/{{ post.link }}">{{ post.title }}</a></h5>
+         <p>Опубліковано: {{ post.published_date }}</p>
+         </div>
+
+    </div>
+{% endfor %}
             <!--Блок для баннеров-->
 </div>
 
@@ -36,29 +50,13 @@
     </div>
     </div>
 </div>
-    <div class="text">
-        <h2><a href="articles">Статті</a></h2>
-    <div>
-        <div class="row">
-  {% for post in articles %}
 
+<div class="text">
 
-     <div class="col-lg-12">
-         <div class="col-lg-4"> <img class="pull-right img-rounded" src="media/{{post.icon }}" width="200" alt=""></div>
-         <div class="col-lg-8">
-        <h5><a href="articles/{{ post.link }}">{{ post.title }}</a></h5>
-         <p>Опубліковано: {{ post.published_date }}</p>
-        {{ post.annonce|safe }}  <a href="articles/{{ post.link }}">read more</a>
-         </div>
-
-    </div>
-
-
-{% endfor %}
-       <a href="articles">Всі статті &raquo &raquo &raquo</a>
-    </div>
+{{patriarhia|safe}}
+      
 </div>
-    </div>
+
 </div>
 
 
