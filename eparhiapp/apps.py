@@ -129,9 +129,9 @@ def getPatriarhiaNew():
     # all_link = full_contents.find('div', class_='item')
     #request_result = {};
     #links_all = all_link.find('a')
-    for content in full_contents :
-         link = 'https://www.cerkva.info'+ content.get('href')
-         request_result = {content.contents[0]:link}
+    # for content in full_contents :
+    #      link = 'https://www.cerkva.info'+ content.get('href')
+    #      request_result = {content.contents[0]:link}
 
     return full_contents
 
