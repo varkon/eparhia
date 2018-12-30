@@ -131,11 +131,8 @@ def getPatriarhiaNew():
     #links_all = all_link.find('a')
     for row_content in full_contents :
          for links in row_content:
-             div_main = links.contents[0]
-             link0 = 'https://www.cerkva.info'+ div_main[0].get('href')
-             link1 = 'https://www.cerkva.info'+ div_main[1].get('href')
-             data_news = div_main[2]
-             request_result = ("<div>",link0,link1,data_news,"</div>")
+             link0 = 'https://www.cerkva.info'+ links.get('href')
+             request_result.append(link0)
 
     return request_result
 
