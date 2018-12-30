@@ -39,7 +39,7 @@ img {
 	}
 
 #top_buttons {
-	width:1070px!important; 
+	/*width:1070px!important;*/
 	/*height: 35px!important;*/
 	vertical-align: middle;
 	background-color:#5d9ea1;
@@ -78,7 +78,7 @@ img {
 	}
 
 .right_board{
-	width:240px;
+	width:25%;
 	margin:15px;
 	float:right;
 	vertical-align:top;
@@ -106,7 +106,7 @@ input[type="text"] {
 	}
 
 .text{
-	width:750px;
+	width:72%;
 	overflow:auto;
 	margin:15px;
 	padding:15px;
