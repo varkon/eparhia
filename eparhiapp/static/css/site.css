@@ -16,17 +16,21 @@ img {
 	margin-left:auto; 
 	margin-right:auto; 
 	margin-top:0; 
-	width:1070px!important;
+	/*width:1070px!important;*/
 	vertical-align:top;
 	background-color: #fff;
 	border: 1px solid #828080;
 	}
 	
 #header {
-	width:1070px!important; 
+	/*width:1070px!important; */
 	height: 175px;
 	vertical-align:top;
 	background:url(../images/top.png) no-repeat;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
 	}
 
 .fb_style {
