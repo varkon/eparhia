@@ -26,22 +26,21 @@
     {% endblock head_meta %}
 
 
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css" media="screen">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.css" media="screen">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" media="screen">
+    {% load bootstrap4 %}
+
     <link href="{% static 'css/site.css' %}"
           rel="stylesheet" media="screen">
 
 </head>
 <body>
 {# Navigation Menu #}
-<div id="wrapper">
-    <div id="header">
-        <a href="https://www.facebook.com/od.eparchy/" target="new"><img src="{% static 'images/fb.png' %}" width="36"
-                                                                         height="36" border="0" class="fb_style"></a>
+<div id="wrapper" class="container-fluid header">
+    <div class="header-top">
+        <div class="logo">
+            <a href="/"><img src="{% static 'images/top.png' %}"></a>
+        </div>
     </div>
-    <div id="top_buttons">
+    <nav class="navbar">
         <ul class="nav navbar-nav menu">
             <li>
                 <a class="mb_buttons" href="/patriarch">Патріарх</a>
@@ -67,7 +66,7 @@
 
         </ul>
 
-    </div>
+    </nav>
     {# The Document Body #}
     <div id="center">
         {% block breadcrumbs %}{% endblock %}

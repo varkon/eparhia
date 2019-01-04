@@ -1,10 +1,31 @@
 /*style.php*/
 body {
-	background:url(../images/vyshyvanka.png);
-	margin: 0px; 
-	padding: 0px; 
-	background-color: #fff
-	}
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #333;
+}
+
+body .header {
+	padding: 0;
+	background-color: #3d86e0;
+	height: 155px;
+}
+
+.container-fluid {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+body .header .header-top {
+	max-width: 1920px;
+	width: 100%;
+	position: relative;
+	margin: 0 auto;
+}
+
 
 img {
 	border:0; 
