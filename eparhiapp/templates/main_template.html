@@ -26,10 +26,14 @@
     {% endblock head_meta %}
 
 
-    {% load bootstrap4 %}
-
+    {% load staticfiles %}
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" media="all">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-theme.css' %}" media="all">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-theme.min.css' %}" media="all">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
     <link href="{% static 'css/site.css' %}"
-          rel="stylesheet" media="screen">
+          rel="stylesheet" media="all">
 
 </head>
 <body>
