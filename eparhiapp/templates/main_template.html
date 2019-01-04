@@ -35,6 +35,7 @@
     <link href="{% static 'css/site.css' %}"
           rel="stylesheet" media="all">
 
+
 </head>
 <body>
 {# Navigation Menu #}
@@ -75,8 +76,18 @@
 
         </ul>
          <form class="form-inline mt-2 mt-md-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Шукати" aria-label="Шукати">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Пошук</button>
+          <script>
+  (function() {
+    var cx = '009553780904443539320:w_dpvtezyza';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
         </form>
 </div>
     </nav>
