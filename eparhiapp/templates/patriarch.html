@@ -30,11 +30,16 @@
 </div>
 
 {% else %}
+    <div id="single-news" class="col-lg-12 col-md-9 news">
+    <div class="header-news">
+
   <div class="news-title" >{{about_model.title}}</div>
+    </div>
     <div class="col-lg-12 col-md-9 ">
     {{ about_model.body|safe }}
     </div>
 {% endif %}
+    </div>
 </div>
 
 
