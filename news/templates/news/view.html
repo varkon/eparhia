@@ -8,17 +8,17 @@
 {% block content %}
 
 
-<div class="text">
+<div class="news-page clearfix">
 
 
     <h3>{{post.title}}</h3>
 
-<div class="row">
+<div class="col-lg-12 col-md-9">
 
-     <div class="col-lg-12">
+
          <p>Опубліковано: {{ post.published_date }}</p>
         {{ post.body|safe }}
-         </div>
+
 
     </div>
 
