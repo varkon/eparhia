@@ -26,6 +26,14 @@ body .header .header-top {
 	margin: 0 auto;
 }
 
+.cntnt .news-page #single-news .header-news .news-title {
+	padding-right: 10%;
+	font-family: "PTSerifBold";
+	font-size: 36px;
+	line-height: 46px;
+	text-align: left;
+}
+
 
 img {
 	border:0; 
