@@ -26,6 +26,18 @@ body .header .header-top {
 	margin: 0 auto;
 }
 
+.navbar-collapse.collapse {
+	display: block !important;
+	height: auto !important;
+	padding-bottom: 0;
+	overflow: visible !important;
+}
+
+.navbar-collapse {
+	width: auto;
+	border-top: 0;
+	box-shadow: none;
+}
 
 img {
 	border:0; 
