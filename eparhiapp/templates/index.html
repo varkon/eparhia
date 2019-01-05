@@ -29,10 +29,8 @@
                  <img alt="{{ post.title }}" class="img-news" src="media/{{post.icon }}" /></a>
              <div class="news-info"><a class="info-text" href="news/{{ post.link }}">{{ post.title }}</a>
              <div class="info-date">{{ post.published_date }}</div></div></div></div>
-        {% continue %}
-       {% endif %}
-
-     <div class="col-lg-4 col-sm-4 col-xs-6 item">
+        {% else %}
+        <div class="col-lg-4 col-sm-4 col-xs-6 item">
          <div class="wrap">
              <a class="link-news" href="news/{{ post.link }}">
                  <img alt="{{ post.title }}" class="img-news" src="media/{{post.icon }}" /></a>
@@ -41,6 +39,9 @@
          <div class="info-date">{{ post.published_date }}</div></div></div>
 
     </div>
+       {% endif %}
+
+
 {% endfor %}
         <a href="/news">Всі новини &raquo &raquo &raquo</a>
 </div>
