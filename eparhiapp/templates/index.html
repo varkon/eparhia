@@ -7,8 +7,9 @@
 <div class="col-lg-3 col-md-3 filter-news ">
 
             <!--Вставить виджет календарь-->
-       <div >
-       <h2><a href="https://www.cerkva.info/posts" target="_blank">Загальноцерковні новини</a></h2>
+    <div class="col-lg-8 filter-wrap" style="height: 2732px;">
+           <div class="title"><a href="https://www.cerkva.info/posts" target="_blank">Загальноцерковні новини</a></div>
+
     {% for row_content in patriarhia %}
 {{ row_content | safe }}
 {% endfor %}
