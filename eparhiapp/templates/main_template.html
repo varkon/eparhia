@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
     <link href="{% static 'css/site.css' %}"
           rel="stylesheet" media="all">
-    <script src="{% static 'js/bootstrap.js' %}" ></script>
+
 
 
 </head>
@@ -53,25 +53,25 @@
       </button>
         <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav mr-auto">
-            <li class="nav-item">
+            <li class="nav-item {% ifequal request.path '/patriarch'%}active{% endifequal%}">
                 <a class="nav-link" href="/patriarch">Патріарх</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {% ifequal request.path '/primat'%}active{% endifequal%}">
                 <a class="nav-link" href="/primat">Предстоятель</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {% ifequal request.path '/archbishop'%}active{% endifequal%}">
                 <a  class="nav-link" href="/archbishop">Архієрей</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {% ifequal request.path '/deanery'%}active{% endifequal%}">
                 <a  class="nav-link" href="/deanery">Благочиння та храми</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {% ifequal request.path '/news'%}active{% endifequal%}">
                 <a  class="nav-link" href="/news">Новини</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {% ifequal request.path '/articles'%}active{% endifequal%}">
                 <a  class="nav-link" href="/articles">Статті</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {% ifequal request.path '/about'%}active{% endifequal%}">
                 <a  class="nav-link" href="/about">Контакти</a>
             </li>
 
