@@ -51,26 +51,7 @@
     </div>
 
 
-<div class="text">
-     <h2><a href="articles">Нові сттаті на сайті</a></h2>
-    <div>
-        <div class="row">
-  {% for post in articles %}
 
-
-     <div class="rows">
-
-         <div class="col-lg-4">
-             <img class="pull-right img-rounded" src="media/{{post.icon }}" width="200" alt="">
-        <h5><a href="articles/{{ post.link }}">{{ post.title }}</a></h5>
-         <p>Опубліковано: {{ post.published_date }}</p>
-         </div>
-
-    </div>
-{% endfor %}
-        </div>
-    </div>
-</div>
 </div> <!-- news-page -->
 
 
