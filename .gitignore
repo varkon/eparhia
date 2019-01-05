@@ -103,5 +103,4 @@ ENV/
 #settings
 eparhia/settings.py
 .idea/*
-static/*
-media/*
+eparhiapp/templates/site1.css
