@@ -56,6 +56,41 @@
 
     </div>
 
+<div class="col-lg-6 col-md-9 news">
+        <!---<div class="header-news">
+              <div class="news-title">Новини</div>
+          </div> -->
+
+        {% for post in articles %}
+        {% if forloop.first %}
+        <div class="col-lg-8 col-sm-8 item hot">
+            <div class="wrap">
+                <a class="link-news hot-news" href="articles/{{ post.link }}">
+                    <img alt="{{ post.title }}" class="img-news" src="media/{{post.icon }}" width="100%"/></a>
+                <div class="news-info"><a class="info-text" href="articles/{{ post.link }}">{{ post.title }}</a>
+                    <div class="info-date">{{ post.published_date }}</div>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <div class="d-inline col-lg-4 col-sm-4 col-xs-6 item">
+            <div class="wrap">
+                <a class="link-news" href="articles/{{ post.link }}">
+                    <img alt="{{ post.title }}" class="img-news" src="media/{{post.icon }}" width="100%"/></a>
+                <div class="news-info">
+                    <a class="info-text" href="articles/{{ post.link }}">{{ post.title }}</a>
+                    <div class="info-date">{{ post.published_date }}</div>
+                </div>
+            </div>
+
+        </div>
+        {% endif %}
+
+
+        {% endfor %}
+        <a href="/articles">Всі статті &raquo &raquo &raquo</a>
+
+    </div>
 
 </div> <!-- news-page -->
 
