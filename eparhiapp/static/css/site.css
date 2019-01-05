@@ -34,6 +34,20 @@ body .header .header-top {
 	text-align: left;
 }
 
+.cntnt .news-page .news .item {
+	height: 410px;
+	position: relative;
+	margin-top: 12px;
+	padding: 0 6px;
+	overflow: hidden;
+}
+
+.cntnt .news-page .filter-news {
+	padding: 0;
+	background: #fff;
+	position: static;
+}
+
 .news-pagination {
 	width: 100%;
 	padding-bottom: 40px;

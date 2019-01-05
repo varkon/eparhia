@@ -2,7 +2,7 @@
 
 {% block content %}
 {# Hero Section #}
-<div class="right_board ">
+<div class="col-lg-3 col-md-3 filter-news ">
 
             <!--Вставить виджет календарь-->
        <div >
@@ -17,29 +17,35 @@
             <!--Блок для баннеров-->
 </div>
 
-<div class="text">
-
-
-    <h2><a href="news">Новини</a></h2>
+<div class="col-lg-6 col-md-9 news">
+  <div class="header-news">
+        <div class="news-title">Новини</div>
+    </div>
 <div>
-    <div class="row">
-    {% for post in news %}
+     {% for post in news %}
+       {% if forloop.first %}
+         <div class="col-lg-8 col-sm-8 item hot"><div class="wrap">
+             <a class="link-news hot-news" href="news/{{ post.link }}">
+                 <img alt="{{ post.title }}" class="img-news" src="media/{{post.icon }}" /></a>
+             <div class="news-info"><a class="info-text" href="news/{{ post.link }}">{{ post.title }}</a>
+             <div class="info-date">{{ post.published_date }}</div></div></div></div>
+        {% continue %}
+       {% endif %}
 
-
-     <div class="col-lg-12">
-         <div class="col-lg-4"> <img class="pull-right img-rounded" src="media/{{post.icon }}" width="200" alt=""></div>
-         <div class="col-lg-8">
-        <h5><a href="news/{{ post.link }}">{{ post.title }}</a></h5>
-         <p>Опубліковано: {{ post.published_date }}</p>
-        {{ post.annonce|safe }}  <a href="news/{{ post.link }}">read more</a>
-         </div>
+     <div class="col-lg-4 col-sm-4 col-xs-6 item">
+         <div class="wrap">
+             <a class="link-news" href="news/{{ post.link }}">
+                 <img alt="{{ post.title }}" class="img-news" src="media/{{post.icon }}" /></a>
+                <div class="news-info">
+                    <a class="info-text" href="news/{{ post.link }}">{{ post.title }}</a>
+         <div class="info-date">{{ post.published_date }}</div></div></div>
 
     </div>
 {% endfor %}
-        <a href="news">Всі новини &raquo &raquo &raquo</a>
-    </div>
-    </div>
+        <a href="/news">Всі новини &raquo &raquo &raquo</a>
 </div>
+    </div>
+
 
 <div class="text">
      <h2><a href="articles">Нові сттаті на сайті</a></h2>
