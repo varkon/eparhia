@@ -10,11 +10,44 @@ body {
 	color: #333;
 }
 
-.btn-group-vertical > .btn-group::after, .btn-toolbar::after, .clearfix::after, .container-fluid::after, .container::after, .dl-horizontal dd::after, .form-horizontal .form-group::after, .modal-footer::after, .modal-header::after, .nav::after, .navbar-collapse::after, .navbar-header::after, .navbar::after, .pager::after, .panel-body::after, .row::after {
+.btn-group-vertical > .btn-group::after,
+.btn-toolbar::after,
+.clearfix::after,
+.container-fluid::after,
+.container::after,
+.dl-horizontal dd::after,
+.form-horizontal .form-group::after,
+.modal-footer::after,
+.modal-header::after, .nav::after, .navbar-collapse::after, .navbar-header::after, .navbar::after, .pager::after, .panel-body::after, .row::after {
 	clear: both;
 }
 
-.btn-group-vertical > .btn-group::after, .btn-group-vertical > .btn-group::before, .btn-toolbar::after, .btn-toolbar::before, .clearfix::after, .clearfix::before, .container-fluid::after, .container-fluid::before, .container::after, .container::before, .dl-horizontal dd::after, .dl-horizontal dd::before, .form-horizontal .form-group::after, .form-horizontal .form-group::before, .modal-footer::after, .modal-footer::before, .modal-header::after, .modal-header::before, .nav::after, .nav::before, .navbar-collapse::after, .navbar-collapse::before, .navbar-header::after, .navbar-header::before, .navbar::after, .navbar::before, .pager::after, .pager::before, .panel-body::after, .panel-body::before, .row::after, .row::before {
+.btn-group-vertical > .btn-group::after,
+.btn-group-vertical > .btn-group::before,
+.btn-toolbar::after,
+.btn-toolbar::before,
+.clearfix::after,
+.clearfix::before,
+.container-fluid::after,
+.container-fluid::before,
+.container::after,
+.container::before,
+.dl-horizontal dd::after,
+.dl-horizontal dd::before,
+.form-horizontal .form-group::after,
+.form-horizontal .form-group::before,
+.modal-footer::after,
+.modal-footer::before,
+.modal-header::after,
+.modal-header::before,
+.nav::after,
+.nav::before, .navbar-collapse::after, .navbar-collapse::before, .navbar-header::after, .navbar-header::before,
+.navbar::after, .navbar::before,
+.pager::after,
+.pager::before,
+.panel-body::after,
+.panel-body::before,
+.row::after, .row::before {
 	display: table;
 	content: " ";
 }
@@ -39,6 +72,19 @@ body {
 	padding: 0 6px;
 	overflow: hidden;
 }
+
+.wrapper{max-width:940px !important}
+.cntnt .news-page .filter-news .filter-wrap .title{font-size:22px}
+
+body .wrapper .content .news .item{height:auto;min-height:410px}
+ body .wrapper .content .news .item .wrap{height:auto}
+ body .wrapper .content .news .item .wrap .link-news{position:relative;width:100%;right:0;left:0}
+ body .wrapper .content .news .item .wrap .link-news .img-news{height:auto;width:100%}
+ body .wrapper .content .news .item .news-info{position:static;margin-top:20px}
+ body .wrapper .content .news .hot .wrap{height:100%}
+ body .wrapper .content .news .hot .wrap .hot-news .img-news{height:auto;vertical-align:middle}
+ body .wrapper .content .news .hot .news-info{position:absolute}
+
  @media (max-width: 767px)
  {
  .cntnt .news-page .filter-news{padding:0}
@@ -174,17 +220,8 @@ body {
  .cntnt .wrap-others-news .others-news .article .img-wrap .inner-wrap{position:relative;right:auto;left:auto;width:100%;height:auto}
  .cntnt .wrap-others-news .others-news .article .img-wrap .inner-wrap img{height:auto;width:100%}
  }
- .cntnt .news-page .church-schools .header-news .news-title{padding:35px 0 25px}
- .descr-schools{font-family:"PTSerifBold";font-size:18px;line-height:30px}
- .list-schools{margin-top:40px}
- .list-schools .title{font-family:"OpenSans-Bold";font-size:16px;line-height:30px;padding-bottom:45px}
- .list-schools table{width:100%;margin:0 0 100px}
- .list-schools table td{padding-bottom:45px;font-family:"PTSerifBold";font-size:24px;color:#3d86e0;vertical-align:top}
- .list-schools table td .school-contacts{padding-top:20px;font-family:"OpenSans-Regular";color:#000;text-transform:uppercase;font-size:14px;line-height:30px}
- .list-schools table td .school-contacts span{color:#3d86e0;text-decoration:underline;cursor:pointer}
- .list-schools table td .school-contacts p{text-transform:none}
- .list-schools table td .school-contacts .italic p{font-style:italic;text-transform:none}
- .list-schools table .left-col{width:45px}
+
+
 
  @media (max-width: 768px)
  {
@@ -209,8 +246,7 @@ body {
  body .header .navbar .container-fluid .navbar-collapse .navbar-right .search{width:auto;margin-right:15px}
  body .header .navbar .container-fluid .navbar-collapse .navbar-right .search .dropdown-toggle{width:60px;padding:20px 20px 0}
  body .header .navbar .container-fluid .navbar-collapse .navbar-right .search .dropdown-toggle span{display:none}
- .wrapper{max-width:940px !important}
- .cntnt .news-page .filter-news .filter-wrap .title{font-size:22px}
+
  }
  @media (max-width: 1150px)
  {
