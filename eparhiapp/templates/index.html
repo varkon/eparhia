@@ -27,7 +27,7 @@
 
         {% for post in news %}
         {% if forloop.first %}
-        <div class="d-inline item hot">
+        <div class="col-lg-8 col-sm-8 item hot">
             <div class="wrap">
                 <a class="link-news hot-news" href="news/{{ post.link }}">
                     <img alt="{{ post.title }}" class="img-news" src="media/{{post.icon }}" width="100%"/></a>
@@ -37,7 +37,7 @@
             </div>
         </div>
         {% else %}
-        <div class="d-inline item">
+        <div class="d-inline col-lg-4 col-sm-4 col-xs-6 item">
             <div class="wrap">
                 <a class="link-news" href="news/{{ post.link }}">
                     <img alt="{{ post.title }}" class="img-news" src="media/{{post.icon }}" width="100%"/></a>
