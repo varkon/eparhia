@@ -48,11 +48,12 @@
 
     {% if news.has_other_pages %}
     <div class="news-pagination">
+        <nav aria-label="...">
   <ul class="pagination">
     {% if news.has_previous %}
-      <li><a href="?page={{ news.previous_page_number }}">&laquo;</a></li>
+      <li><a href="?page={{ news.previous_page_number }}">Попередня</a></li>
     {% else %}
-      <li class="disabled"><span>&laquo;</span></li>
+      <li class="disabled"><span>Попередня</span></li>
     {% endif %}
     {% for i in news.paginator.page_range %}
       {% if users.number == i %}
@@ -62,13 +63,15 @@
       {% endif %}
     {% endfor %}
     {% if users.has_next %}
-      <li><a href="?page={{ news.next_page_number }}">&raquo;</a></li>
+      <li><a href="?page={{ news.next_page_number }}">Наступна</a></li>
     {% else %}
-      <li class="disabled"><span>&raquo;</span></li>
+      <li class="disabled"><span>Наступна</span></li>
     {% endif %}
   </ul>
+        </nav>
+        </div>
 {% endif %}
-</div>
+
 
 </div> <!-- news-page-->
 

@@ -51,6 +51,9 @@ body {
 	display: table;
 	content: " ";
 }
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+	display: block;
+}
 
  /*.cntnt .news-page .filter-news .filter-wrap .form-open .save-form span{display:block;line-height:50px;text-align:center;font-family:"OpenSans-Bold";color:#fff;background:#3d86e0;text-transform:uppercase}
  .cntnt .news-page .filter-news .filter-wrap .form-open .save-form span:hover{cursor:pointer}
