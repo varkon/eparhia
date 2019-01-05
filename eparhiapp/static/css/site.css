@@ -91,6 +91,27 @@ body .wrapper .content .news .item{height:auto;min-height:410px}
  body .wrapper .content .news .hot .wrap .hot-news .img-news{height:auto;vertical-align:middle}
  body .wrapper .content .news .hot .news-info{position:absolute}
 
+body .wrapper .content .news .btn-more-news {
+	margin-top: 60px;
+}
+
+body .wrapper .content .news .btn-more-news .more {
+	display: block;
+	max-width: 296px;
+	width: 100%;
+	padding: 20px 0;
+	margin: 0 auto;
+	background-color: #3d86e0;
+	color: #fff;
+	font-size: 14px;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+body .wrapper .content .news .btn-more-news .more .col-lg-12{
+    width:100%;
+}
 
  @media (max-width: 767px)
  {
