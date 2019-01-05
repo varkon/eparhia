@@ -144,7 +144,29 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 	width: 100%;
 	text-align: center;
 }
+.news-pagination nav .pagination li {
+	display: inline-block;
+	width: 3.2%;
+	height: 40px;
+	font-family: "OpenSans-Regular";
+	font-size: 12px;
+	text-align: center;
+	line-height: 12px;
+	color: #3d86e0;
+	padding: 14px 0;
+}
 
+.news-pagination nav .pagination li:first-child {
+	float: left;
+	width: 110px;
+	background: #d8e7f9;
+	text-transform: uppercase;
+	color: #000;
+	cursor: default;
+}
+.news-pagination nav .pagination .active {
+	width: 5%;
+}
 body .footer {
 	padding-top: 80px;
 }
