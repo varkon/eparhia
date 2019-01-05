@@ -21,7 +21,8 @@ body {
 
 .cntnt .news-page .filter-news .filter-wrap .form-open .save-form span{display:block;line-height:50px;text-align:center;font-family:"OpenSans-Bold";color:#fff;background:#3d86e0;text-transform:uppercase}
  .cntnt .news-page .filter-news .filter-wrap .form-open .save-form span:hover{cursor:pointer}
- .cntnt .news-page .news .header-news{display:none}}
+ .cntnt .news-page .news .header-news{display:none}
+ 
  @media (max-width: 767px)
  {
  .cntnt .news-page .filter-news{padding:0}
@@ -110,8 +111,7 @@ body {
  .cntnt .wrap-others-news .others-news .article .article-info .header-a{display:block;font-size:14px;color:#3d86e0;line-height:30px;text-transform:uppercase;text-decoration:none;font-family:"OpenSans-Bold"}
  .cntnt .wrap-others-news .others-news .article .article-info .header-a:hover{color:#000}
  .cntnt .wrap-others-news .others-news .article .article-info .text-a{display:block;margin-top:5px;font-size:16px;color:#000;text-decoration:none;font-family:"PTSerifBold"}.cntnt .wrap-others-news .others-news .article .article-info .text-a:hover{color:#3d86e0}.cntnt .wrap-others-news .others-news .article .article-info .date-a{color:#a7a7a7;font-size:11px;line-height:30px;font-family:"OpenSans-Bold";text-transform:uppercase}.filter-form .menu-link a{display:block;padding:14px 15px;font-family:"PTSerifRegular";font-size:14px;line-height:15px;text-decoration:none;color:#3d86e0}.filter-form .active{background:#d0e2f7}@media (max-width: 1500px){.cntnt .wrap-others-news .others-news{width:60%}}
- .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9 {
-	float: left;
+
 }
  @media (max-width: 1200px)
  {
@@ -169,8 +169,6 @@ body {
  .list-schools table td .school-contacts p{text-transform:none}
  .list-schools table td .school-contacts .italic p{font-style:italic;text-transform:none}
  .list-schools table .left-col{width:45px}
- @media (max-width: 993px)
- {
 
  @media (max-width: 768px)
  {
