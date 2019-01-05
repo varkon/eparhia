@@ -138,7 +138,7 @@ def getPatriarhiaNew():
              else :
                  data  = '<div>'+ links.contents[0]+'</div>'
                  request_result.append(data)
-         
+
 
     return request_result
 
