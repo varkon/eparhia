@@ -91,11 +91,11 @@ body {
  .news .hot .wrap .hot-news .img-news{height:auto;vertical-align:middle}
  .news .hot .news-info{position:absolute}
 
- .news .btn-more-news {
+.cntnt .news-page  .news .btn-more-news {
 	margin-top: 60px;
 }
 
- .news .btn-more-news .more {
+ .cntnt .news-page  .news .btn-more-news .more {
 	display: block;
 	max-width: 296px;
 	width: 100%;
@@ -109,7 +109,7 @@ body {
 	text-decoration: none;
 }
 
-.news .btn-more-news .more .col-lg-12{
+.cntnt .news-page .news .btn-more-news .more .col-xs-12{
     width:100%;
 }
 
