@@ -82,20 +82,20 @@ body {
 	overflow: hidden;
 }
 
-body .wrapper .content .news .item{height:auto;min-height:410px}
- body .wrapper .content .news .item .wrap{height:auto}
- body .wrapper .content .news .item .wrap .link-news{position:relative;width:100%;right:0;left:0}
- body .wrapper .content .news .item .wrap .link-news .img-news{height:auto;width:100%}
- body .wrapper .content .news .item .news-info{position:static;margin-top:20px}
- body .wrapper .content .news .hot .wrap{height:100%}
- body .wrapper .content .news .hot .wrap .hot-news .img-news{height:auto;vertical-align:middle}
- body .wrapper .content .news .hot .news-info{position:absolute}
+ .news .item{height:auto;min-height:410px}
+ .news .item .wrap{height:auto}
+ .news .item .wrap .link-news{position:relative;width:100%;right:0;left:0}
+ .news .item .wrap .link-news .img-news{height:auto;width:100%}
+ .news .item .news-info{position:static;margin-top:20px}
+ .news .hot .wrap{height:100%}
+ .news .hot .wrap .hot-news .img-news{height:auto;vertical-align:middle}
+ .news .hot .news-info{position:absolute}
 
-body .wrapper .content .news .btn-more-news {
+ .news .btn-more-news {
 	margin-top: 60px;
 }
 
-body .wrapper .content .news .btn-more-news .more {
+ .news .btn-more-news .more {
 	display: block;
 	max-width: 296px;
 	width: 100%;
@@ -109,8 +109,13 @@ body .wrapper .content .news .btn-more-news .more {
 	text-decoration: none;
 }
 
-body .wrapper .content .news .btn-more-news .more .col-lg-12{
+.news .btn-more-news .more .col-lg-12{
     width:100%;
+}
+
+.news .title {
+	font-size: 24px;
+	text-transform: uppercase;
 }
 
  @media (max-width: 767px)
