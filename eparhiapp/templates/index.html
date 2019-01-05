@@ -3,53 +3,58 @@
 {% block content %}
 {# Hero Section #}
 
-    <div class="news-page clearfix">
-<div class="col-lg-3 col-md-3 filter-news ">
+<div class="news-page clearfix">
+    <div class="col-lg-3 col-md-3 filter-news ">
 
-            <!--Вставить виджет календарь-->
-    <div class="col-lg-8 filter-wrap" >
-           <div class="title">Загальноцерковні новини</div>
+        <!--Вставить виджет календарь-->
+        <div class="col-lg-8 filter-wrap">
+            <div class="title">Загальноцерковні новини</div>
 
-    {% for row_content in patriarhia %}
-{{ row_content | safe }}
-{% endfor %}
+            {% for row_content in patriarhia %}
+            {{ row_content | safe }}
+            {% endfor %}
 
-</div>
+        </div>
 
 
-            <!--Блок для баннеров-->
-</div>
+        <!--Блок для баннеров-->
+    </div>
 
-<div class="col-lg-6 col-md-9 news">
-  <!---<div class="header-news">
-        <div class="news-title">Новини</div>
-    </div> -->
+    <div class="col-lg-6 col-md-9 news">
+        <!---<div class="header-news">
+              <div class="news-title">Новини</div>
+          </div> -->
 
-     {% for post in news %}
-       {% if forloop.first %}
-         <div class="col-lg-8 col-sm-8 item hot"><div class="wrap">
-             <a class="link-news hot-news" href="news/{{ post.link }}">
-                 <img alt="{{ post.title }}" class="img-news" src="media/{{post.icon }}" /></a>
-             <div class="news-info"><a class="info-text" href="news/{{ post.link }}">{{ post.title }}</a>
-             <div class="info-date">{{ post.published_date }}</div></div></div></div>
+        {% for post in news %}
+        {% if forloop.first %}
+        <div class="col-lg-8 col-sm-8 item hot">
+            <div class="wrap">
+                <a class="link-news hot-news" href="news/{{ post.link }}">
+                    <img alt="{{ post.title }}" class="img-news" src="media/{{post.icon }}"/></a>
+                <div class="news-info"><a class="info-text" href="news/{{ post.link }}">{{ post.title }}</a>
+                    <div class="info-date">{{ post.published_date }}</div>
+                </div>
+            </div>
+        </div>
         {% else %}
         <div class="col-lg-4 col-sm-4 col-xs-6 item">
-         <div class="wrap">
-             <a class="link-news" href="news/{{ post.link }}">
-                 <img alt="{{ post.title }}" class="img-news" src="media/{{post.icon }}" /></a>
+            <div class="wrap">
+                <a class="link-news" href="news/{{ post.link }}">
+                    <img alt="{{ post.title }}" class="img-news" src="media/{{post.icon }}"/></a>
                 <div class="news-info">
                     <a class="info-text" href="news/{{ post.link }}">{{ post.title }}</a>
-         <div class="info-date">{{ post.published_date }}</div></div></div>
+                    <div class="info-date">{{ post.published_date }}</div>
+                </div>
+            </div>
 
-    </div>
-       {% endif %}
+        </div>
+        {% endif %}
 
 
-{% endfor %}
+        {% endfor %}
         <a href="/news">Всі новини &raquo &raquo &raquo</a>
 
     </div>
-
 
 
 </div> <!-- news-page -->

@@ -25,6 +25,12 @@ body .header .header-top {
 	position: relative;
 	margin: 0 auto;
 }
+.cntnt
+{
+position:relative;
+background:#f2f7fd;
+overflow:hidden;
+}
 
 .cntnt .news-page .news .item .wrap {
 	position: relative;
