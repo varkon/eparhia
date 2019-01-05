@@ -82,17 +82,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .cntnt .news-page .news .item .wrap {
 	position: relative;
 	height: 100%;
-	overflow: hidden;
 }
 
- .news .item{height:auto;min-height:410px}
- .news .item .wrap{height:auto}
+ /*.news .item{height:auto;min-height:410px}
  .news .item .wrap .link-news{position:relative;width:100%;right:0;left:0}
  .news .item .wrap .link-news .img-news{height:auto;width:100%}
  .news .item .news-info{position:static;margin-top:20px}
  .news .hot .wrap{height:100%}
- .news .hot .wrap .hot-news .img-news{height:auto;vertical-align:middle}
- .news .hot .news-info{position:absolute}
+ .news .hot .wrap .hot-news .img-news{height:auto;vertical-align:middle}*/
+
 
 .cntnt .news-page  .news .btn-more-news {
 	margin-top: 60px;
@@ -127,6 +125,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 	line-height: 30px;
 	color: #fff;
 }
+
 .pagination {
 	display: inline-block;
 	padding-left: 0;
