@@ -26,6 +26,19 @@ body .header .header-top {
 	margin: 0 auto;
 }
 
+.cntnt .news-page .news .item .wrap {
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+}
+.cntnt .news-page .news .item .wrap .link-news {
+	text-align: center;
+}
+
+.cntnt .news-page .news .hot .wrap .hot-news .img-news {
+	height: 100%;
+	vertical-align: top;
+} 
 .cntnt .news-page #single-news .header-news .news-title {
 	padding-right: 10%;
 	font-family: "PTSerifBold";
@@ -53,7 +66,20 @@ body .header .header-top {
 	padding-bottom: 40px;
 }
 
-
+.cntnt .news-page .news .item .wrap .link-news {
+	position: absolute;
+	left: -50%;
+	right: -50%;
+	margin: 0 auto;
+	display: block;
+	height: 100%;
+	width: 200%;
+	text-align: center;
+}
+.cntnt .news-page .news .hot .wrap .hot-news .img-news {
+	height: 100%;
+	vertical-align: top;
+}
 img {
 	border:0; 
 	margin:0; 
