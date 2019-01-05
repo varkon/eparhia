@@ -62,16 +62,16 @@
             <li class="nav-item {% if '/archbishop' in request.path %}active{% endif%}">
                 <a  class="nav-link" href="/archbishop">Архієрей</a>
             </li>
-            <li class="nav-item {% ifequal request.path '/deanery'%}active{% endifequal%}">
+            <li class="nav-item {% if '/deanery' in request.path %}active{% endif%}">
                 <a  class="nav-link" href="/deanery">Благочиння та храми</a>
             </li>
-            <li class="nav-item {% ifequal request.path '/news'%}active{% endifequal%}">
+            <li class="nav-item {% if '/news' in request.path %}active{% endif%}">
                 <a  class="nav-link" href="/news">Новини</a>
             </li>
-            <li class="nav-item {% ifequal request.path '/articles'%}active{% endifequal%}">
+            <li class="nav-item {% if '/articles' in request.path %}active{% endif%}">
                 <a  class="nav-link" href="/articles">Статті</a>
             </li>
-            <li class="nav-item {% ifequal request.path '/about'%}active{% endifequal%}">
+            <li class="nav-item {% if '/about' in request.path %}active{% endif%}">
                 <a  class="nav-link" href="/about">Контакти</a>
             </li>
 
