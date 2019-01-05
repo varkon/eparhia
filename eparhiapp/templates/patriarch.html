@@ -1,9 +1,5 @@
 {% extends "main_template.html" %}
 {% block title %}Патріарх{% endblock title %}
-{% block breadcrumbs %}<ol class="breadcrumb">
-  <li class="breadcrumb-item"><a href="/">Головна</a></li>
-   <li class="breadcrumb-item active">Патріарх</li>
-</ol>{% endblock %}
 {% block content %}
 {# Hero Section #}
 
@@ -32,6 +28,10 @@
 {% else %}
     <div id="single-news" class="col-lg-12 col-md-9 news">
     <div class="header-news">
+    {% block breadcrumbs %}<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/">Головна</a></li>
+   <li class="breadcrumb-item active">Патріарх</li>
+</ol>{% endblock %}
 
   <div class="news-title" >{{about_model.title}}</div>
     </div>

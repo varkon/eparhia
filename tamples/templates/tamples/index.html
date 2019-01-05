@@ -1,20 +1,21 @@
 {% extends "main_template.html" %}
 {% block title %}Благочиння{% endblock title %}
-{% block breadcrumbs %}
-<ol class="breadcrumb">
-  <li class="breadcrumb-item"><a href="/">Головна</a></li>
-  <li class="breadcrumb-item active">Благочиння</li>
-</ol>
-{% endblock %}
+
 {% block content %}
 
 
 <div class="news-page clearfix">
 
 
-    <h2>Благочиння епархії</h2>
 
 <div class="col-lg-12 col-md-9">
+    <div class="header-news">
+        {% block breadcrumbs %}
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/">Головна</a></li>
+  <li class="breadcrumb-item active">Благочиння</li>
+</ol>
+{% endblock %}</div>
   {% for post in deanery %}
      <div class="col-lg-12 col-md-9" style="padding-top:10px;">
          <a href="{{ post.id }}">

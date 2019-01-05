@@ -1,21 +1,20 @@
 {% extends "main_template.html" %}
 {% block title %}{{post.title}}{% endblock title %}
-{% block breadcrumbs %}<ol class="breadcrumb">
-  <li class="breadcrumb-item"><a href="/">Головна</a></li>
-  <li class="breadcrumb-item"><a href="/deanery">Благочиння</a></li>
-  <li class="breadcrumb-item active">{{post.title}}</li>
-</ol>{% endblock %}
+
 {% block content %}
 
 
 <div class="news-page clearfix">
 
-
-    <h3>{{post.title}}</h3>
-
 <div class="col-lg-12 col-md-9">
 
-
+<div class="header-news">
+    {% block breadcrumbs %}<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/">Головна</a></li>
+  <li class="breadcrumb-item"><a href="/deanery">Благочиння</a></li>
+  <li class="breadcrumb-item active">{{post.title}}</li>
+</ol>{% endblock %}
+</div>
 
          {% if post.published_date != None %}
          <p> Дата освячування : {{ post.published_date }}</p>
@@ -35,15 +34,5 @@
     </div>
 
 </div>
-<div class="right_board">
-			<form name="test" method="post" action="">
-   			<input type="text" size="40">
-			</form>
-
-            <!--Вставить виджет календарь-->
-
-
-            <!--Блок для баннеров-->
-    </div>
 
 {% endblock %}

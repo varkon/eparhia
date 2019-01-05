@@ -1,18 +1,20 @@
 {% extends "main_template.html" %}
 {% block title %}Новини{% endblock title %}
-{% block breadcrumbs %}
-<ol class="breadcrumb">
-  <li class="breadcrumb-item"><a href="/">Головна</a></li>
-  <li class="breadcrumb-item active">Новини</li>
-</ol>
-{% endblock %}
+
 {% block content %}
 
 
 <div class="news-page clearfix">
 
 
-    <h2>Новини</h2>
+    <div class="header-news">
+        {% block breadcrumbs %}
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/">Головна</a></li>
+  <li class="breadcrumb-item active">Новини</li>
+</ol>
+{% endblock %}
+    </div>
 
 <div class="col-lg-12 col-md-9 news">
   {% for post in news %}
@@ -28,6 +30,7 @@
     {% endfor %}
 
     {% if news.has_other_pages %}
+    <div class="news-pagination">
   <ul class="pagination">
     {% if news.has_previous %}
       <li><a href="?page={{ news.previous_page_number }}">&laquo;</a></li>
@@ -49,6 +52,7 @@
   </ul>
 {% endif %}
 </div>
-</>
+</div>
+</div> <!-- news-page-->
 
 {% endblock %}
