@@ -118,6 +118,13 @@ body {
 	text-transform: uppercase;
 }
 
+.cntnt .news-page .news .hot .wrap .news-info .info-text {
+	margin-bottom: 18px;
+	font-size: 24px;
+	line-height: 30px;
+	color: #fff;
+}
+
  @media (max-width: 767px)
  {
  .cntnt .news-page .filter-news{padding:0}
