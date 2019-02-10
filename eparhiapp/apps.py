@@ -120,14 +120,18 @@ def transliterate(str):
     return str
 
 def getPatriarhiaNew():
+   # url = "https://www.pomisna.info/news/"
     url = "https://www.cerkva.info/posts"
-    page = requests.get(url)
+    page = requests.get(url, timeout=10)
+    if page.status_code != requests.codes.ok :
+        return list()
+
     soup = BeautifulSoup(page.text, 'html.parser')
     full_contents = soup.find_all('div',class_="news-info", limit = 12)
     # remove_link = full_contents.find('div', class_='banner')
     # remove_link.decompose()
     # all_link = full_contents.find('div', class_='item')
-    request_result = list();
+    request_result = list()
     #links_all = all_link.find('a')
     for row_content in full_contents :
          for links in row_content:
