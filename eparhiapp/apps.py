@@ -121,10 +121,15 @@ def transliterate(str):
 
 def getPatriarhiaNew():
    # url = "https://www.pomisna.info/news/"
-    url = "https://www.cerkva.info/posts"
-    page = requests.get(url, timeout=10)
+   url = "https://www.cerkva.info/posts"
+   page = None
+   try:
+     page = requests.get(url, timeout=10)
+   except Exception as e:
+     page.status_code = 500;
+
     if page.status_code != requests.codes.ok :
-        return list()
+        return list();
 
     soup = BeautifulSoup(page.text, 'html.parser')
     full_contents = soup.find_all('div',class_="news-info", limit = 12)
