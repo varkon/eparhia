@@ -126,13 +126,14 @@ def getPatriarhiaNew():
     #url = "https://www.cerkva.info/posts"
     page = dir()
     code = True
+    headers = {'user-agent': 'Mozilla/5.0'}
     request_result = list()
     try:
-        page = requests.get(url, timeout=5)
+        page = requests.get(url, headers=headers, timeout=5)
     except Exception as e:
         code = False
 
-    if code == False:
+    if not code :
         return request_result;
 
     soup = BeautifulSoup(page.text, 'html.parser')
