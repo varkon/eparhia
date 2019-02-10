@@ -122,13 +122,13 @@ def transliterate(str):
 
 
 def getPatriarhiaNew():
-    # url = "https://www.pomisna.info/news/"
-    url = "https://www.cerkva.info/posts"
+    url = "https://www.pomisna.info/news/"
+    #url = "https://www.cerkva.info/posts"
     page = dir()
     code = True
     request_result = list()
     try:
-        page = requests.get(url, timeout=10)
+        page = requests.get(url, timeout=5)
     except Exception as e:
         code = False
 
