@@ -122,8 +122,8 @@ def transliterate(str):
 
 
 def getPatriarhiaNew():
-    url = "https://www.pomisna.info/news/"
-    #url = "https://www.cerkva.info/posts"
+    #url = "https://www.pomisna.info/news/"
+    url = "https://www.cerkva.info/posts"
     page = dir()
     code = True
     headers = {'user-agent': 'Mozilla/5.0'}
@@ -137,7 +137,7 @@ def getPatriarhiaNew():
         return request_result;
 
     soup = BeautifulSoup(page.text, 'html.parser')
-    full_contents = soup.find_all('div', class_="post-desc", limit=12)
+    full_contents = soup.find_all('div', class_="news-info", limit=12)
     # remove_link = full_contents.find('div', class_='banner')
     # remove_link.decompose()
     # all_link = full_contents.find('div', class_='item')
@@ -146,7 +146,7 @@ def getPatriarhiaNew():
     for row_content in full_contents:
         for links in row_content:
             if links.get('href') is not None:
-                link0 = 'https://www.pomisna.info/' + links.get('href')
+                link0 = 'https://www.cerkva.info/' + links.get('href')
                 link_name = links.contents[0]
                 request_result.append('<a href="' + link0 + '" target="_blank" >' + link_name + '</a> :')
             else:
