@@ -114,8 +114,18 @@ body .wrapper .content .news .hot .news-info {
  .news .item .news-info{position:static;margin-top:20px}
  .news .hot .wrap{height:100%}
  .news .hot .wrap .hot-news .img-news{height:auto;vertical-align:middle}
- .news .hot .news-info{position:absolute}
+ /*news .hot .news-info{position:absolute}*/
 
+.cntnt .news-page .news .item .wrap .news-info {
+	position: absolute;
+	height: 180px;
+	padding-top: 20px;
+	z-index: 2;
+	bottom: 0;
+	right: 12px;
+	left: 12px;
+	width: auto;
+}
 
 .cntnt .news-page  .news .btn-more-news {
 	margin-top: 60px;
