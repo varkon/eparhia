@@ -53,9 +53,9 @@
       </button>
         <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav mr-auto">
-            <li class="nav-item {% if 'patriarch' in request.path %}active{% endif%}">
+           <!-- <li class="nav-item {% if 'patriarch' in request.path %}active{% endif%}">
                 <a class="nav-link" href="/patriarch">Патріарх</a>
-            </li>
+            </li> -->
             <li class="nav-item {% if 'primat' in request.path %}active{% endif%}">
                 <a class="nav-link" href="/primat">Предстоятель</a>
             </li>
@@ -73,6 +73,9 @@
             </li>-->
             <li class="nav-item {% if '/about' in request.path %}active{% endif%}">
                 <a  class="nav-link" href="/about">Контакти</a>
+            </li>
+            <li class="nav-item {% if '/benefactors' in request.path %}active{% endif%}">
+                <a  class="nav-link" href="/benefactors">Благодійникам</a>
             </li>
 
         </ul>
@@ -96,7 +99,7 @@
     <div class="col-sm-6 hidden-xs footer-left-col"><div class="row"><div class="col-sm-4">
         <ul class="list-unstyled footer-links"><!--<li><a href="/patriarch">Патріарх</a></li>--><li><a href="/news">Новини</a></li><li><a href="/articles">Статті</a></li></ul></div><div class="col-sm-4"><ul class="list-unstyled footer-links"><li><a href="https://www.cerkva.info/documents">Документи</a></li><li><a href="http://vydavnytstvo.org.ua/kalendar.html">Календар</a></li><li><a href="https://www.cerkva.info/books?category=23">Бібліотека</a></li></ul></div><div class="col-sm-4"><ul class="list-unstyled footer-links">
 
-    </li><li><a href="/about">Контакти</a></li></ul></div></div></div><div class="col-sm-6 col-xs-12 footer-right-col"><div><div class="col-sm-10 col-sm-offset-2 col-xs-12"><div class="row pull-right"><div class="footer-social"><a class="fb icons-fb" href="https://www.facebook.com/%D0%9A%D0%B8%D1%97%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9-%D0%9F%D0%B0%D1%82%D1%80%D1%96%D0%B0%D1%80%D1%85%D0%B0%D1%82-%D0%A3%D0%9F%D0%A6-%D0%9A%D0%9F-814918141953632/"></a></div><div class="footer-social"><a class="tw icons-tw" href="https://twitter.com/Cerkva_Info"></a></div><div class="footer-social"><a class="yt icons-yt" href="https://www.youtube.com/channel/UCMqs_q8XhsIje-kMBubzHJw"></a></div><div class="footer-social"><a class="user" href="https://www.facebook.com/PatriarchPhilaret/"></a></div></div></div></div></div><div class="col-xs-12 copyright"><div class="row"><div class="col-sm-6 col-xs-12 cr">© 2017 – 2019 Одеське Епархіальне Управління Православна Церква України</div><div class="col-sm-6 col-xs-12"><div class="by-dc pull-right"><span>Розроблено</span><a href="http://varkon.biz/" target="_blank">Varkon Ltd</a></div></div></div></div></div></div>
+    </li><li><a href="/about">Контакти</a></li><li><a href="/benefactors">Благодійникам</a></li></ul></div></div></div><div class="col-sm-6 col-xs-12 footer-right-col"><div><div class="col-sm-10 col-sm-offset-2 col-xs-12"><div class="row pull-right"><div class="footer-social"><a class="fb icons-fb" href="https://www.facebook.com/%D0%9A%D0%B8%D1%97%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9-%D0%9F%D0%B0%D1%82%D1%80%D1%96%D0%B0%D1%80%D1%85%D0%B0%D1%82-%D0%A3%D0%9F%D0%A6-%D0%9A%D0%9F-814918141953632/"></a></div><div class="footer-social"><a class="tw icons-tw" href="https://twitter.com/Cerkva_Info"></a></div><div class="footer-social"><a class="yt icons-yt" href="https://www.youtube.com/channel/UCMqs_q8XhsIje-kMBubzHJw"></a></div><div class="footer-social"><a class="user" href="https://www.facebook.com/PatriarchPhilaret/"></a></div></div></div></div></div><div class="col-xs-12 copyright"><div class="row"><div class="col-sm-6 col-xs-12 cr">© 2017 – 2019 Одеське Епархіальне Управління Православна Церква України</div><div class="col-sm-6 col-xs-12"><div class="by-dc pull-right"><span>Розроблено</span><a href="http://varkon.biz/" target="_blank">Varkon Ltd</a></div></div></div></div></div></div>
 </body>
 {# Set of blocks that can be used to display JavaScript files #}
 {% block footer_javascript %}
