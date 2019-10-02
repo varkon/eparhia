@@ -137,21 +137,26 @@ def getPatriarhiaNew():
         return request_result;
 
     soup = BeautifulSoup(page.text, 'html.parser')
-    full_contents = soup.find_all('div', class_="article-item", limit=12)
+    full_contents = soup.find_all('article', class_="article-item", limit=12)
     # remove_link = full_contents.find('div', class_='banner')
     # remove_link.decompose()
     # all_link = full_contents.find('div', class_='item')
 
     # links_all = all_link.find('a')
-    print(full_contents)
+
     for row_content in full_contents:
-        for links in row_content:
-            if links.get('href') is not None:
-                link0 = links.get('href')
-                link_name = links.contents[0]
-                request_result.append('<a href="' + link0 + '" target="_blank" >' + link_name + '</a> :')
-            else:
-                data = '<div>' + links.contents[0] + '</div>'
-                request_result.append(data)
-    print (request_result)
+    #print(row_content)
+      for links in row_content.find_all('div', class_=False):
+        divLink = links.find('div',class_= 'search_only')
+        linkTag = links.find("h3")
+        divData = links.find("div",class_="date")
+        all_block = {divLink, linkTag, divData}
+#       print(links)
+#      if links.get('href') is not None:
+#         link0 = links.get('href')
+#         link_name = links.contents[0]
+#         request_result.append('<a href="' + link0 + '" target="_blank" >' + link_name + '</a> :')
+#      else:
+      # data = '<div>' + links.href + '</div>'
+        request_result.append(all_block)
     return request_result
