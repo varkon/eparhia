@@ -151,7 +151,7 @@ def getPatriarhiaNew():
         linkTag = links.find("h3")
 
         divData = links.find("div",class_="date")
-        all_block = "<div>Дата: "+str(divData) + "</div><div>"+str(linkTag) + "</div><div> Категорія: "+str(divLink)+"</div>"
+        all_block = "<div class='patriarh-news'>Дата: "+str(divData) + "<div>"+str(linkTag) + "</div><div> Категорія: "+str(divLink)+"</div></div>"
 #       print(links)
 #      if links.get('href') is not None:
 #         link0 = links.get('href')

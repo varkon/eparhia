@@ -77,12 +77,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 	position: relative;
 	height: 100%;
 }
-.date > h3 {
+.patriarh-news h3 {
 
 	margin-bottom: .5rem;
 	font-family: inherit;
+	font-size:12px;
 	font-weight: 100;
-	line-height: 0.5;
+	line-height: 1.;
 	color: inherit;
 }
 
