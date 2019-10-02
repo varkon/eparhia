@@ -147,7 +147,7 @@ def getPatriarhiaNew():
     for row_content in full_contents:
     #print(row_content)
       for links in row_content.find_all('div', class_=False):
-        divLink = links.find('div',class_= 'search_only')
+        divLink = links.find('div',class_= 'category')
         linkTag = links.find("h3")
 
         divData = links.find("div",class_="date")
