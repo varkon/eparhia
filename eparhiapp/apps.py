@@ -146,12 +146,11 @@ def getPatriarhiaNew():
 
     for row_content in full_contents:
     #print(row_content)
-      for links in row_content.find_all('div'):
-        divLink = links.find('div',class_= 'category')
+      for links in row_content.find_all('div', class_=False):
         linkTag = links.find("h3")
 
         divData = links.find("div",class_="date")
-        all_block = "<div class='patriarh-news'>"+str(divData) + "<div>"+str(linkTag) + "</div><div> Категорія: "+str(divLink)+"</div></div>"
+        all_block = "<div class='patriarh-news'>"+str(divData) + "<div>"+str(linkTag) + "</div></div>"
 #       print(links)
 #      if links.get('href') is not None:
 #         link0 = links.get('href')
