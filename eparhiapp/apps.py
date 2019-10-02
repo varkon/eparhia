@@ -143,6 +143,7 @@ def getPatriarhiaNew():
     # all_link = full_contents.find('div', class_='item')
 
     # links_all = all_link.find('a')
+    print(full_contents)
     for row_content in full_contents:
         for links in row_content:
             if links.get('href') is not None:
