@@ -11,7 +11,8 @@
             <div class="title">Загальноцерковні новини</div>
 
             {% for row_content in patriarhia %}
-            {{ row_content | safe }}
+            {% for item in row_content %}
+              {{ item | safe }}
             {% endfor %}
 
         </div>
