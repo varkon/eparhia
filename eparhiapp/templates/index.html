@@ -11,9 +11,9 @@
             <div class="title">Загальноцерковні новини</div>
 
             {% for i in patriarhia %}
-             {{  patriarhia[i][0] | safe }}
-             {{  patriarhia[i][1] | safe }}
-             {{  patriarhia[i][2] | safe }}
+             {{  i[0] | safe }}
+             {{  i[1] | safe }}
+             {{  i[2] | safe }}
              {% endfor %}
 
         </div>
