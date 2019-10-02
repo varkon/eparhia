@@ -10,10 +10,10 @@
         <div class="col-lg-8 filter-wrap">
             <div class="title">Загальноцерковні новини</div>
 
-            {% for i in patriarhia %}
-             {{  i[0] | safe }}
-             {{  i[1] | safe }}
-             {{  i[2] | safe }}
+            {% for item in patriarhia %}
+              {% for i in item %}
+                {{  i | safe }}
+              {% endfor %}
              {% endfor %}
 
         </div>
