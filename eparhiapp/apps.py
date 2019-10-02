@@ -149,6 +149,7 @@ def getPatriarhiaNew():
       for links in row_content.find_all('div', class_=False):
         divLink = links.find('div',class_= 'search_only')
         linkTag = links.find("h3")
+
         divData = links.find("div",class_="date")
         all_block = "<div>Дата: "+str(divData) + "</div><div>"+str(linkTag) + "</div><div> Категорія: "+str(divLink)+"</div>"
 #       print(links)
