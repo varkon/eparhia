@@ -22,8 +22,8 @@
             <div class="title">Укази та розпорядження</div>
 
             {% for edict in edicts %}
-     <div class='patriarh-news'>"+ {{ edict.published_date }} <div><a class="info-text" href="/news/{{ post.link }}">{{ edict.title }}</a></div></div>
-              
+     <div class='patriarh-news'>{{ edict.published_date }} <div><a class="info-text" href="/edicts/{{ post.link }}">{{ edict.title }}</a></div></div>
+
             <hr>
 
              {% endfor %}
