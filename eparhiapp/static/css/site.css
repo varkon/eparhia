@@ -10,6 +10,8 @@ body {
 	color: #333;
 }
 
+
+
 .btn-group-vertical > .btn-group::after,
 .btn-toolbar::after,
 .clearfix::after,
@@ -107,6 +109,11 @@ body .wrapper .content .news .item .news-info {
                top: 245px;
                right: 42px;
                left: 12px;
+               color: #fff;
+               white-space: nowrap;
+               width: 200px;
+               overflow: hidden;
+               text-overflow: ellipsis;
                width: auto;
 }
 body .wrapper .content .news .hot .news-info {
