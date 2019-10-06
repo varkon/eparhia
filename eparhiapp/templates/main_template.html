@@ -9,7 +9,7 @@
     <title>{% block title %}Головна {% endblock title %} | Одесько-Балське епархіаьне управління</title>
     {% block head_favicon %}
     <link rel="shortcut icon" type="image/png"
-          href="{{ STATIC_URL }}images/logo_small.png">
+          href="{% static 'images/logo_small.png' %}">
     {% endblock head_favicon %}
     {% block head_meta %}
     {% block head_meta_charset %}
