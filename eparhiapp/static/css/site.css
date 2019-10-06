@@ -109,11 +109,6 @@ body .wrapper .content .news .item .news-info {
                top: 245px;
                right: 42px;
                left: 12px;
-               color: #fff;
-               white-space: nowrap;
-               width: 200px;
-               overflow: hidden;
-               text-overflow: ellipsis;
                width: auto;
 }
 body .wrapper .content .news .hot .news-info {
@@ -141,6 +136,11 @@ body .wrapper .content .news .hot .news-info {
 	right: 12px;
 	left: 12px;
 	width: auto;
+	color: #fff;
+    white-space: nowrap;
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .cntnt .news-page  .news .btn-more-news {
