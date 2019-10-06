@@ -18,6 +18,16 @@
 
         </div>
 
+<div class="col-lg-8 filter-wrap">
+            <div class="title">Недавні укази</div>
+
+            {% for item in edicts %}
+              {{  item | safe }}
+            <hr>
+
+             {% endfor %}
+
+        </div>
 
         <!--Блок для баннеров-->
     </div>
