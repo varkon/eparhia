@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.utils import timezone
 from news.models import News
+from edicts.models import Edict
 from articles.models import Article
 from eparhiapp.models import Patriarch, Archbishop, Primat, About, Benefactor
 from .apps import getPatriarhiaNew
@@ -9,9 +10,10 @@ from .apps import getPatriarhiaNew
 
 def index(request) :
     news = News.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[:11]
+    edicts = Edict.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[:11]
     articles = {} #Article.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[:6]
     patriarhia = getPatriarhiaNew()
-    return render(request, 'index.html', {'news': news, 'articles':articles, 'patriarhia':patriarhia})
+    return render(request, 'index.html', {'news': news, 'articles':articles, 'patriarhia':patriarhia, 'edicts': edicts})
 
 def about(request):
     about_model = About.objects.all().order_by('-id').first()
