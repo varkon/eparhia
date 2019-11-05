@@ -15,7 +15,7 @@ class TampleAdmin(admin.ModelAdmin):
     inlines = [PhoneInline]
     list_display = ['title', 'get_deanery']
     def get_deanery(self, obj):
-        return obj.deanery.title
+        return obj.city.title
     get_deanery.admin_order_field = 'title'  # Allows column order sorting
     get_deanery.short_description = 'Благочиння'  # Renames column head
 
