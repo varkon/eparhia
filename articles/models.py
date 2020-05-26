@@ -1,14 +1,14 @@
 from django.db import models
 from django.utils import timezone
-from tinymce.models import HTMLField
+from tinymce import models as tinymce_model
 from filebrowser.fields import FileBrowseField
 from eparhiapp.apps import transliterate
 
 # Create your models here.
 class Article(models.Model) :
     title = models.CharField(max_length = 255, verbose_name='Заголовок')
-    annonce = HTMLField(verbose_name='Анонс новини')
-    body = HTMLField(verbose_name='Повний текст новини')
+    annonce = tinymce_model.HTMLField(verbose_name='Анонс новини')
+    body = tinymce_model.HTMLField(verbose_name='Повний текст новини')
     link = models.CharField(max_length = 255, verbose_name='Посилання', unique=True, blank=True)
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     created_date = models.DateTimeField(
