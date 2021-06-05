@@ -9,7 +9,7 @@ from .apps import getPatriarhiaNew
 
 
 def index(request) :
-    news = News.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[:11]
+    news = News.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[:12]
     edicts = Edict.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[:11]
     articles = {} #Article.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[:6]
     patriarhia = getPatriarhiaNew()
