@@ -39,7 +39,7 @@
           </div> -->
 <div class="header-news"><div class="container-fluid"><span class="title">Новини</span></div></div>
         {% for post in news %}
-        {% if forloop.first %}
+       <!-- {% if forloop.first %}
         <div class="col-lg-8 col-sm-8 item hot">
             <div class="wrap">
                 <a class="link-news hot-news" href="/news/{{ post.link }}">
@@ -49,11 +49,11 @@
                 </div>
             </div>
         </div>
-        {% else %}
+        {% else %}-->
         <div class="d-inline col-lg-4 col-sm-4 col-xs-6 item">
             <div class="wrap">
                 <a class="link-news" href="news/{{ post.link }}">
-                    <img alt="{{ post.title }}" class="img-news" src="media/{{post.icon }}" width="100%"/></a>
+                    <img alt="{{ post.title }}" class="img-news" src="media/{{post.icon }}" height=250px /></a>
                 <div class="news-info">
                     <a class="info-text" href="news/{{ post.link }}">{{ post.title }}</a>
                     <div class="info-date">{{ post.published_date }}</div>
@@ -61,7 +61,7 @@
             </div>
 
         </div>
-        {% endif %}
+      <!--  {% endif %}-->
 
 
         {% endfor %}
