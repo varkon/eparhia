@@ -129,7 +129,7 @@ body .wrapper .content .news .hot .news-info {
  /*news .hot .news-info{position:absolute}*/
 
 .cntnt .news-page .news .item .wrap .news-info {
-	position: absolute;
+	/*position: absolute;*/
 	height: 180px;
 	padding-top: 20px;
 	z-index: 2;
